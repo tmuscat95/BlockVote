@@ -1,13 +1,14 @@
 pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2;
 
-import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
+//import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "./VoteToken.sol";
 import "./Shared.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract District is IERC721Receiver{
+contract District is Ownable{
     VoteToken internal voteToken;
-    uint8 internal districtNumber;
+    uint8 public districtNumber;
     //uint public eligibleVotes ;
     uint32 public castVotes;
     uint32 internal uncountedVotes;
@@ -21,8 +22,10 @@ contract District is IERC721Receiver{
     mapping(uint8 => uint) public party1stCountVotes;
     address[] electedCandidates;
     
-    constructor(uint8 _districtNumber, Shared.Candidate[] memory _candidates, VoteToken _voteToken) public{
-        voteToken = _voteToken;
+    event Vote(address _voter, uint8 districtNo, uint32 castVotes);
+
+    constructor(uint8 _districtNumber, Shared.Candidate[] memory _candidates/*, VoteToken _voteToken*/) Ownable() public{
+        //voteToken = _voteToken;
         districtNumber = _districtNumber;
         //eligibleVotes = _eligibleVotes;
         castVotes = 0;
@@ -34,26 +37,31 @@ contract District is IERC721Receiver{
         }
     }
     
+    function setVoteToken(VoteToken _voteToken) public onlyOwner{
+        voteToken = _voteToken;
+    }
     /*function getVoterTurnout() public view returns(uint){
         return castVotes/eligibleVotes;
     }*/
     
-    function vote(uint256 _tokenId, address[] memory _preferences) public{
-        
-        voteToken.approve(address(this),_tokenId);
-        voteToken.transferFrom(msg.sender,address(this),_tokenId);
-        voteToken.setVotePreferences(_tokenId, _preferences);
+    function vote(uint256 tokenId, address[] memory _preferences) public{
+        require(voteToken.district(tokenId) == districtNumber,"Incorrect District");
+        //require(voteToken.district(_tokenId) == districtNumber);
+        //voteToken.approve(address(this),_tokenId);
+        voteToken.transferFrom(msg.sender,address(this),tokenId);
+        voteToken.setVotePreferences(tokenId, _preferences);
         castVotes += 1;
+        emit Vote(msg.sender, districtNumber, castVotes);
     }
     
-    function onERC721Received(address operator, address from, uint256 tokenId, bytes calldata data) external override returns (bytes4){
+    /*function onERC721Received(address operator, address from, uint256 tokenId, bytes calldata data) external override returns (bytes4){
         require(voteToken.district(tokenId) == districtNumber,"Incorrect District");
 
-   }
+   }*/
 
-   function getQuota() internal returns(uint32){
-       quota = (castVotes/(seats+1)) + 1;
-       return quota;
+   function getQuota() public view returns(uint32){
+       //quota = (castVotes/(seats+1)) + 1;
+       return (castVotes/(seats+1)) + 1;
    }
     
     function getAllElected() public returns(address[] memory){
@@ -68,7 +76,11 @@ contract District is IERC721Receiver{
         return electedCandidates;
     }
     
-    function count() external{
+    function transferAllBack(address _from) public {
+        voteToken.transferAllBack(_from);
+    }
+
+    function count() public{
         castVotes = uint32(voteToken.balanceOf(address(this)));
         uncountedVotes = castVotes;
         quota = getQuota();
@@ -82,9 +94,11 @@ contract District is IERC721Receiver{
                 uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i);
                 
                 address candidateAddress = voteToken.preferences(voteTokenID,j);
+                if(candidateAddress == address(0))
+                    continue;
                 if(j==1)
                     party1stCountVotes[candidates[candidateAddress].party] += 1;
-                   
+                  
                 uint32 voteBalance = uint32(voteToken.balanceOf(candidateAddress));
                 
                 
@@ -92,9 +106,12 @@ contract District is IERC721Receiver{
                     voteToken.transferFrom(address(this), candidateAddress, voteTokenID);
                     candidates[candidateAddress].elected = true;
                 }
+                
+                
                 else if(candidates[candidateAddress].elected == false && candidates[candidateAddress].eliminated == false){
                     voteToken.transferFrom(address(this), candidateAddress, voteTokenID);
                 }
+                
                 else{
                     if(voteBalance < currentLeastVotes){
                         currentLeastVotes = voteBalance;
@@ -107,6 +124,7 @@ contract District is IERC721Receiver{
                         currentLeastVotes = voteBalance+1;
                         currentCandidateWithLeastVotes = candidateAddress;
                     }
+                   
             }    
             
             candidates[currentCandidateWithLeastVotes].eliminated = true;
@@ -114,7 +132,7 @@ contract District is IERC721Receiver{
            
             
         }
-        
+        /*
         for (uint32 i = 0; i < castVotes; i++){
             uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i);
             
@@ -137,6 +155,7 @@ contract District is IERC721Receiver{
                 
                     
             }
-        }
+            
+        }*/
     }
 }

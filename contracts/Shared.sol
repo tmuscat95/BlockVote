@@ -8,7 +8,7 @@ library Shared {
     struct Candidate{
         address _address;
         uint8 party;
-        uint8 district;
+        uint8 districtNo;
         
         bool elected;
         bool eliminated;
