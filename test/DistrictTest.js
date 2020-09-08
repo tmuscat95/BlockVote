@@ -22,17 +22,18 @@ contract("District" , async accounts => {
         
         candidateAddresses = [];
         for(let i = 0; i < 10; i++)
-            candidateAddresses.push(web3.eth.accounts.create().address);
+            candidateAddresses.push(await web3.eth.accounts.create().address);
         
         candidateStructs = [];
 
-        candidateAddresses.slice(0,1).forEach( (_address) => {
+        candidateAddresses.slice(0,5).forEach( (_address) => {
             candidateStructs.push([
                 _address, // _address
                 0, //party
                 districtNo, //districtNo
                 0, // elected
-                0 //eliminated
+                0, //eliminated
+                0
             ]);
         });
 
@@ -42,7 +43,8 @@ contract("District" , async accounts => {
                 1, //party
                 districtNo, //districtNo
                 0, // elected
-                0 //eliminated
+                0, //eliminated
+                0
             ]);
         });
         
@@ -50,7 +52,11 @@ contract("District" , async accounts => {
         voteToken.setAllowed(district.address);
         await district.setVoteToken(voteToken.address);
         
+        console.log("Candidates Count: " + await district.candidatesCount());
+        console.log(candidateStructs);
     });
+
+   
 
     it("Vote function does not revert when attempting to vote with a VoteToken instance having the correct district number (13). And increases cast votes count. ie: voting succeeds", async () => {
         let tokenId = 1;
@@ -129,7 +135,6 @@ contract("District" , async accounts => {
         await truffleAssert.reverts(district.transferAllBack(accounts[0]),"Attempting to seize token from another district.");
   });
 
-
   it('Given 5 cast votes (and a corresponding quota of 1) each selecting the same 5 candidates from the same party (id 0), each candidate should end up with 1 vote and be marked as elected. party\'s index should map to 5 in the party1stCountVotes mapping', async () => {
         
     for(let i = 1; i<=5; i++){
@@ -139,16 +144,40 @@ contract("District" , async accounts => {
         await voteToken.setApprovalForAll(district.address,true);
 
         await district.vote(i,candidateAddresses.slice(0,5));
-        console.log(i);
+       //console.log(i);
         for(let j = 1; j<=5; j++)
             console.log(await voteToken.preferences(i,j));
         
     }
     
-    assert.equal(await district.castVotes(),5);
-    await district.count();
+    assert.equal(await district.castVotes(),5,"Wrong number of cast votes.");
+    assert.equal(await district.candidatesCount(),10,"Candidates count is not 10 before vote counting");
+    await district.countVotes();
+    assert.equal(await district.candidatesCount(),10,"Candidates count is not 10 after vote counting");
 
     
+    console.log(candidateAddresses.slice(0,5));
+    var i = 0;
+    candidateAddresses.slice(0,5).forEach(async (candidateAddress) =>{
+        //console.log(i++);
+        let balance = await voteToken.balanceOf(candidateAddress);
+        //console.log("Candidate Index " + i +" " + balance.toString());
+        //console.log(await district.candidates(candidateAddress));
+        assert.equal(1,balance,candidateAddress +" " + i + " Incorrect Balance.");
+        i++;
+    });
+
+    console.log(candidateAddresses.slice(5,10));
+    i = 0;
+    candidateAddresses.slice(5,10).forEach(async (candidateAddress) =>{
+        //console.log(i++);
+        let balance = await voteToken.balanceOf(candidateAddress);
+        //console.log("Candidate Index " + i +" " + balance.toString());
+        //console.log(await district.candidates(candidateAddress));
+        assert.equal(0,balance,candidateAddress +" " + i + " Incorrect Balance.");
+        i++;
+    });
 });
     
+
 });

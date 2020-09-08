@@ -4,7 +4,10 @@ pragma experimental ABIEncoderV2;
 import "./District.sol";
 
 contract DistrictFactory{
-    function create(uint8 _districtNumber, Shared.Candidate[] memory _candidates/*, VoteToken _voteToken*/) public returns(District) {
-        return new District(_districtNumber, _candidates/*, _voteToken*/);
+
+    function create(uint8 _districtNumber, Shared.Candidate[] memory _candidates) public returns(District) {
+        District d = new District(_districtNumber, _candidates);
+        d.transferOwnership(msg.sender);
+        return d;
     }
 }

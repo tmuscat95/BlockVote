@@ -1,25 +1,25 @@
 {
   "contractName": "Shared",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":\"Shared\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol\":{\"keccak256\":\"0xd8e571ac7d0fa069584a3a68da7e9327266ec8abaebb2501aa3b59b1c543e1f7\",\"urls\":[\"bzz-raw://7a1e7e25ef684db9b7286c795f50f4dfcdf8af0d614fcb24a22290eeb08e6e01\",\"dweb:/ipfs/QmdyRvoaXpKuc81UKMQ1WwxpB32yzh2cMdrAMs91jmJPnA\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":{\"keccak256\":\"0x299a8e6c3004742ce94acb2969055f9a9c99cfedabad7e3c2b4f1f879495f354\",\"urls\":[\"bzz-raw://16e4eeefa26a82cb36c2be07037797a5c555d9ed8a7dfc36899591cc42484404\",\"dweb:/ipfs/QmPpweYUwmhnpz3yGKvuzHDF7wMnupEuhN52BpVPjoPkVs\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol\":{\"keccak256\":\"0xb6e53263f96bf9b1c81673fd20de9677727a5a1b026fe5686e8b0d9f8f7718f7\",\"urls\":[\"bzz-raw://293ec6607dce73f1f6deedcd5d30b14696dce2863d4d80ba137303b23b69923f\",\"dweb:/ipfs/QmUH4wZtqXpmKTx1n9C7bAv5TjD6GQGqKqCUTBj77pbC1b\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0xb046d18f9d09683ca1c0ed6d80c61da8a8a7d9b30bad70a17b898538683eff74\",\"urls\":[\"bzz-raw://4728713afa6ae36cc9e92c7107c796a313add3ec20f813be2cde76c814486b2a\",\"dweb:/ipfs/QmUJBTXvYaGDF5PVnd5pUvYerc9DRXvqANDzgCzAp3FkkA\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xfa152b6e88a1dc50780e8f1580426dc23ad2e1e2c2f086a088adf206a202f453\",\"urls\":[\"bzz-raw://5127b264994adab88fae419b1c493efc5acd07134c19ee5c0397e50018291ebf\",\"dweb:/ipfs/QmWwJZVhvdmvUCdimbb6R2Jiu59zjPqm6XTMchM6LaEHAp\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0x1071a23188ba7f5bb16f51b0b01a67fd41fe56f862d8f83985788cf46f3b91bd\",\"urls\":[\"bzz-raw://c7082ca99b93f2e541cafaad00ed32675adf0752eab78eccabcf91dec9fd5d73\",\"dweb:/ipfs/QmdqooMmYBQVi7p6subDFM4e1944AuLjZUpHMjGtae7Lgd\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x227bafd3e165b13f5d98c42a44376e48d41f4a265db8803f2707faaeae9659aa\",\"urls\":[\"bzz-raw://c9aa7959a30871669ce46172cd117b084b607d602d9ce695ce79005582b0b69b\",\"dweb:/ipfs/QmXZUWeLXmArQinHL4RnacJLT22GvCExqREYM6pHLX7CX9\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x3636662804cd8f474536b2875a9038a4c3fb91879f1bbff48af5c3f140fcd2f0\",\"urls\":[\"bzz-raw://9fab8521263fa581544000cb57335a3f2e6bcdfbb5579d3ceaa5acf741c67c4f\",\"dweb:/ipfs/QmZfXnMom7JSNtfyie5yGPN1SUC4SmHbz4ScVBH88URmA7\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xe7f984cedc00a138dc27f263c73c32ba9a4b2fd23b6c34ac46f46c074b943538\",\"urls\":[\"bzz-raw://0f4acda12f076fe7584921241ddbb5b460ca7cad6cb8a42252ac7f2a9f539127\",\"dweb:/ipfs/QmQmfhkEv9GrhdWe67QtXnU19AMuoEmy31QnHPkucdYLjZ\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x321ee37ef4925020aa818a03ec7fe48e057561f65ab009a84f6c20c86026ade7\",\"urls\":[\"bzz-raw://01f9d74a17a56024984251b97e428e24c9d3abffbae5bd290f0ec263c82e9694\",\"dweb:/ipfs/QmRryCuuXu2ukrDmatB8TqdEhPLiK6NBRt41RiPUaX1qKy\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xdfb4f812600ba4ce6738c35584ceb8c9433472583051b48ba5b1f66cb758a498\",\"urls\":[\"bzz-raw://df02dffe1c1de089d9b4f6192f0dcf464526f2230f420b3deec4645e0cdd2bff\",\"dweb:/ipfs/QmcqXGAU3KJqwrgUVoGJ2W8osomhSJ4R5kdsRpbuW3fELS\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0x244e4b74b17716120cf28e58636f11c699b8c0c94628bd952a95cee038d7e32b\",\"urls\":[\"bzz-raw://198d566157120c526bd6b5086b32cae85a11389b8a538f533ba9f9447915da0e\",\"dweb:/ipfs/QmeE6d8KWERx7f1FVS5tMnitNJxBm2yWXRSEUBF7R6voLh\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0xb2a11b236f073662f5a196995863f51c11d006bf7c3de158b316dfa1506c4b79\",\"urls\":[\"bzz-raw://8651649cf0b9efa18c3b01c030276fa320d41adbdc286833417e7f36e357b2f3\",\"dweb:/ipfs/QmafhM2Nd1aP43QVB1eRRZaqRXQKswNfQcWi8U8xjrxCfN\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x79484115dbfa737054f73e041009a02eeb434dd81be5d684bf4255ad3b5ab558\",\"urls\":[\"bzz-raw://12c119699463450c2544f5b9d8709b5e9e9164c62948a79c3ec53423a051d969\",\"dweb:/ipfs/QmPJduzSAaekq447QeFqAp3E7dc8CnNk5ajofckJ4ahA7Q\"]}},\"version\":1}",
-  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220815ec5dea97f7cc00173fedee64bee89450f94d792d511e94448c856fdad020564736f6c63430006020033",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220815ec5dea97f7cc00173fedee64bee89450f94d792d511e94448c856fdad020564736f6c63430006020033",
-  "sourceMap": "77:705:4:-:0;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
-  "deployedSourceMap": "77:705:4:-:0;;;;;;;;",
-  "source": "pragma solidity ^0.6.0;\nimport \"./VoteToken.sol\";\nimport \"./District.sol\";\n\n\nlibrary Shared {\n    \n    struct Candidate{\n        address _address;\n        uint8 party;\n        uint8 district;\n        \n        bool elected;\n        bool eliminated;\n        //uint votes;\n    }\n    \n    /*struct DistrictResults {\n        uint8 districtNo;\n        \n        mapping(address => Candidate) candidateResults;\n        mapping(uint8 => uint) party1stCountVotes;\n    }*/\n    \n    \n    struct Election{\n        string name;\n        uint voteStart;\n        uint voteEnd;\n        VoteToken voteToken;\n        \n        mapping(uint8 => uint32) party1stCountVotes;\n        //mapping(uint8 => DistrictResults) districtResults;\n        mapping(uint8 => District) districtContracts;\n    }\n   \n    \n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":\"Shared\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol\":{\"keccak256\":\"0x00ceb799f5493f52daeb6ae381dfbafd59f89b37db603b6bfac8424cc62e8201\",\"urls\":[\"bzz-raw://048490ef8dffc2e94656fe3a97a45309c05a51c905af089fec843e3a3504b640\",\"dweb:/ipfs/QmXX44xfXrzzNmJt1zmRYV2uUqjW7d5jCKNyK5C8kfgQyZ\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":{\"keccak256\":\"0x0633198fa5383ad0bbdfdc7f85db20f07f164b69dc0877f978c3f8c985b38584\",\"urls\":[\"bzz-raw://4f39abaa7c9d3e2b0b534bc24c9ec4e722f43604abe2bc76ac4a02f78d763a41\",\"dweb:/ipfs/QmYYx4Nxi6L7Zc45ZkqoL74q5J6PEBFojZny1WDRx1im9f\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol\":{\"keccak256\":\"0x449330d051806465935f2bfc869315c93adeb9168b840b5fcbbe09b8d2f364f5\",\"urls\":[\"bzz-raw://213329caa51e8212bb1b26d2df587097d058e03056aa69ff0298f4cc7fc0c70c\",\"dweb:/ipfs/QmNiWJEXq6gdUdhdTf3fhpARDPZMfWEAJPCTXuDNLQ7hUq\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0xb046d18f9d09683ca1c0ed6d80c61da8a8a7d9b30bad70a17b898538683eff74\",\"urls\":[\"bzz-raw://4728713afa6ae36cc9e92c7107c796a313add3ec20f813be2cde76c814486b2a\",\"dweb:/ipfs/QmUJBTXvYaGDF5PVnd5pUvYerc9DRXvqANDzgCzAp3FkkA\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xfa152b6e88a1dc50780e8f1580426dc23ad2e1e2c2f086a088adf206a202f453\",\"urls\":[\"bzz-raw://5127b264994adab88fae419b1c493efc5acd07134c19ee5c0397e50018291ebf\",\"dweb:/ipfs/QmWwJZVhvdmvUCdimbb6R2Jiu59zjPqm6XTMchM6LaEHAp\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0xe173e0589f2141092d2ded3f0e5c941b3d11dcb40d865ed3a5b21732ca721a8a\",\"urls\":[\"bzz-raw://fc80050c9eb103ed5df0874dc3b44b90404589777c3483931f694377bc1dfe97\",\"dweb:/ipfs/Qmc5YEanfsviPpWWSY7WbxPwNFUJax4uSXdmW6wGDMzFjS\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0x227bafd3e165b13f5d98c42a44376e48d41f4a265db8803f2707faaeae9659aa\",\"urls\":[\"bzz-raw://c9aa7959a30871669ce46172cd117b084b607d602d9ce695ce79005582b0b69b\",\"dweb:/ipfs/QmXZUWeLXmArQinHL4RnacJLT22GvCExqREYM6pHLX7CX9\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x3636662804cd8f474536b2875a9038a4c3fb91879f1bbff48af5c3f140fcd2f0\",\"urls\":[\"bzz-raw://9fab8521263fa581544000cb57335a3f2e6bcdfbb5579d3ceaa5acf741c67c4f\",\"dweb:/ipfs/QmZfXnMom7JSNtfyie5yGPN1SUC4SmHbz4ScVBH88URmA7\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xe7f984cedc00a138dc27f263c73c32ba9a4b2fd23b6c34ac46f46c074b943538\",\"urls\":[\"bzz-raw://0f4acda12f076fe7584921241ddbb5b460ca7cad6cb8a42252ac7f2a9f539127\",\"dweb:/ipfs/QmQmfhkEv9GrhdWe67QtXnU19AMuoEmy31QnHPkucdYLjZ\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x321ee37ef4925020aa818a03ec7fe48e057561f65ab009a84f6c20c86026ade7\",\"urls\":[\"bzz-raw://01f9d74a17a56024984251b97e428e24c9d3abffbae5bd290f0ec263c82e9694\",\"dweb:/ipfs/QmRryCuuXu2ukrDmatB8TqdEhPLiK6NBRt41RiPUaX1qKy\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xdfb4f812600ba4ce6738c35584ceb8c9433472583051b48ba5b1f66cb758a498\",\"urls\":[\"bzz-raw://df02dffe1c1de089d9b4f6192f0dcf464526f2230f420b3deec4645e0cdd2bff\",\"dweb:/ipfs/QmcqXGAU3KJqwrgUVoGJ2W8osomhSJ4R5kdsRpbuW3fELS\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0x244e4b74b17716120cf28e58636f11c699b8c0c94628bd952a95cee038d7e32b\",\"urls\":[\"bzz-raw://198d566157120c526bd6b5086b32cae85a11389b8a538f533ba9f9447915da0e\",\"dweb:/ipfs/QmeE6d8KWERx7f1FVS5tMnitNJxBm2yWXRSEUBF7R6voLh\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0xb2a11b236f073662f5a196995863f51c11d006bf7c3de158b316dfa1506c4b79\",\"urls\":[\"bzz-raw://8651649cf0b9efa18c3b01c030276fa320d41adbdc286833417e7f36e357b2f3\",\"dweb:/ipfs/QmafhM2Nd1aP43QVB1eRRZaqRXQKswNfQcWi8U8xjrxCfN\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x79484115dbfa737054f73e041009a02eeb434dd81be5d684bf4255ad3b5ab558\",\"urls\":[\"bzz-raw://12c119699463450c2544f5b9d8709b5e9e9164c62948a79c3ec53423a051d969\",\"dweb:/ipfs/QmPJduzSAaekq447QeFqAp3E7dc8CnNk5ajofckJ4ahA7Q\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220b79defb70a25ee3bb04c17805b45d12f847de9a750ac13f12589c47538b357cf64736f6c63430006020033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220b79defb70a25ee3bb04c17805b45d12f847de9a750ac13f12589c47538b357cf64736f6c63430006020033",
+  "sourceMap": "77:716:4:-:0;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "77:716:4:-:0;;;;;;;;",
+  "source": "pragma solidity ^0.6.0;\nimport \"./VoteToken.sol\";\nimport \"./District.sol\";\n\n\nlibrary Shared {\n    uint8 constant parties = 2;\n    struct Candidate{\n        address _address;\n        uint8 party;\n        uint8 districtNo;\n        \n        bool elected;\n        bool eliminated;\n        \n        uint32 votes;\n    }\n    \n    struct DistrictResults {\n        uint8 districtNo;\n        \n        Candidate[] candidateResults;\n        uint32[] party1stCountVotes;\n    }\n    \n    \n    struct Election{\n        mapping(uint8 => District) districtContracts;\n        string name;\n        uint voteStart;\n        uint voteEnd;\n        VoteToken voteToken;\n        \n        mapping(uint8 => uint32) party1stCountVotes;\n        //mapping(uint8 => DistrictResults) districtResults;\n        \n    }\n   \n    \n}",
   "sourcePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol",
   "ast": {
     "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol",
     "exportedSymbols": {
       "Shared": [
-        886
+        1190
       ]
     },
-    "id": 887,
+    "id": 1191,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 855,
+        "id": 1145,
         "literals": [
           "solidity",
           "^",
@@ -32,10 +32,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol",
         "file": "./VoteToken.sol",
-        "id": 856,
+        "id": 1146,
         "nodeType": "ImportDirective",
-        "scope": 887,
-        "sourceUnit": 1097,
+        "scope": 1191,
+        "sourceUnit": 1519,
         "src": "24:25:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -43,10 +43,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol",
         "file": "./District.sol",
-        "id": 857,
+        "id": 1147,
         "nodeType": "ImportDirective",
-        "scope": 887,
-        "sourceUnit": 553,
+        "scope": 1191,
+        "sourceUnit": 723,
         "src": "50:24:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -58,25 +58,69 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 886,
+        "id": 1190,
         "linearizedBaseContracts": [
-          886
+          1190
         ],
         "name": "Shared",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": true,
+            "id": 1150,
+            "name": "parties",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 1190,
+            "src": "98:26:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1148,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "98:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 1149,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "123:1:4",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "internal"
+          },
+          {
             "canonicalName": "Shared.Candidate",
-            "id": 868,
+            "id": 1163,
             "members": [
               {
                 "constant": false,
-                "id": 859,
+                "id": 1152,
                 "name": "_address",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "129:16:4",
+                "scope": 1163,
+                "src": "156:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -84,10 +128,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 858,
+                  "id": 1151,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "129:7:4",
+                  "src": "156:7:4",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -99,12 +143,12 @@
               },
               {
                 "constant": false,
-                "id": 861,
+                "id": 1154,
                 "name": "party",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "155:11:4",
+                "scope": 1163,
+                "src": "182:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -112,10 +156,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 860,
+                  "id": 1153,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "155:5:4",
+                  "src": "182:5:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -126,12 +170,12 @@
               },
               {
                 "constant": false,
-                "id": 863,
-                "name": "district",
+                "id": 1156,
+                "name": "districtNo",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "176:14:4",
+                "scope": 1163,
+                "src": "203:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -139,10 +183,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 862,
+                  "id": 1155,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "176:5:4",
+                  "src": "203:5:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -153,12 +197,12 @@
               },
               {
                 "constant": false,
-                "id": 865,
+                "id": 1158,
                 "name": "elected",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "209:12:4",
+                "scope": 1163,
+                "src": "238:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -166,10 +210,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 864,
+                  "id": 1157,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "209:4:4",
+                  "src": "238:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -180,12 +224,12 @@
               },
               {
                 "constant": false,
-                "id": 867,
+                "id": 1160,
                 "name": "eliminated",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "231:15:4",
+                "scope": 1163,
+                "src": "260:15:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -193,13 +237,40 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 866,
+                  "id": 1159,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "231:4:4",
+                  "src": "260:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1162,
+                "name": "votes",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1163,
+                "src": "294:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 1161,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "294:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
                   }
                 },
                 "value": null,
@@ -208,22 +279,184 @@
             ],
             "name": "Candidate",
             "nodeType": "StructDefinition",
-            "scope": 886,
-            "src": "103:172:4",
+            "scope": 1190,
+            "src": "130:183:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Shared.DistrictResults",
+            "id": 1172,
+            "members": [
+              {
+                "constant": false,
+                "id": 1165,
+                "name": "districtNo",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1172,
+                "src": "356:16:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1164,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "356:5:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1168,
+                "name": "candidateResults",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1172,
+                "src": "391:28:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Candidate_$1163_storage_$dyn_storage_ptr",
+                  "typeString": "struct Shared.Candidate[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 1166,
+                    "name": "Candidate",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1163,
+                    "src": "391:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Candidate_$1163_storage_ptr",
+                      "typeString": "struct Shared.Candidate"
+                    }
+                  },
+                  "id": 1167,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "391:11:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Candidate_$1163_storage_$dyn_storage_ptr",
+                    "typeString": "struct Shared.Candidate[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1171,
+                "name": "party1stCountVotes",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1172,
+                "src": "429:27:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint32_$dyn_storage_ptr",
+                  "typeString": "uint32[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 1169,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "id": 1170,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "429:8:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint32_$dyn_storage_ptr",
+                    "typeString": "uint32[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DistrictResults",
+            "nodeType": "StructDefinition",
+            "scope": 1190,
+            "src": "323:140:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Shared.Election",
-            "id": 885,
+            "id": 1189,
             "members": [
               {
                 "constant": false,
-                "id": 870,
+                "id": 1176,
+                "name": "districtContracts",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1189,
+                "src": "503:44:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$722_$",
+                  "typeString": "mapping(uint8 => contract District)"
+                },
+                "typeName": {
+                  "id": 1175,
+                  "keyType": {
+                    "id": 1173,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "503:26:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$722_$",
+                    "typeString": "mapping(uint8 => contract District)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 1174,
+                    "name": "District",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 722,
+                    "src": "520:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_District_$722",
+                      "typeString": "contract District"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1178,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "501:11:4",
+                "scope": 1189,
+                "src": "557:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -231,10 +464,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 869,
+                  "id": 1177,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "501:6:4",
+                  "src": "557:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -245,12 +478,12 @@
               },
               {
                 "constant": false,
-                "id": 872,
+                "id": 1180,
                 "name": "voteStart",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "522:14:4",
+                "scope": 1189,
+                "src": "578:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -258,10 +491,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 871,
+                  "id": 1179,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "522:4:4",
+                  "src": "578:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -272,12 +505,12 @@
               },
               {
                 "constant": false,
-                "id": 874,
+                "id": 1182,
                 "name": "voteEnd",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "546:12:4",
+                "scope": 1189,
+                "src": "602:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -285,10 +518,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 873,
+                  "id": 1181,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "546:4:4",
+                  "src": "602:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -299,27 +532,27 @@
               },
               {
                 "constant": false,
-                "id": 876,
+                "id": 1184,
                 "name": "voteToken",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "568:19:4",
+                "scope": 1189,
+                "src": "624:19:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_VoteToken_$1096",
+                  "typeIdentifier": "t_contract$_VoteToken_$1518",
                   "typeString": "contract VoteToken"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 875,
+                  "id": 1183,
                   "name": "VoteToken",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 1096,
-                  "src": "568:9:4",
+                  "referencedDeclaration": 1518,
+                  "src": "624:9:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_VoteToken_$1096",
+                    "typeIdentifier": "t_contract$_VoteToken_$1518",
                     "typeString": "contract VoteToken"
                   }
                 },
@@ -328,12 +561,12 @@
               },
               {
                 "constant": false,
-                "id": 880,
+                "id": 1188,
                 "name": "party1stCountVotes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "606:43:4",
+                "scope": 1189,
+                "src": "662:43:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -341,79 +574,31 @@
                   "typeString": "mapping(uint8 => uint32)"
                 },
                 "typeName": {
-                  "id": 879,
+                  "id": 1187,
                   "keyType": {
-                    "id": 877,
+                    "id": 1185,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "614:5:4",
+                    "src": "670:5:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "606:24:4",
+                  "src": "662:24:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_uint8_$_t_uint32_$",
                     "typeString": "mapping(uint8 => uint32)"
                   },
                   "valueType": {
-                    "id": 878,
+                    "id": 1186,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "623:6:4",
+                    "src": "679:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
-                    }
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 884,
-                "name": "districtContracts",
-                "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 885,
-                "src": "720:44:4",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$552_$",
-                  "typeString": "mapping(uint8 => contract District)"
-                },
-                "typeName": {
-                  "id": 883,
-                  "keyType": {
-                    "id": 881,
-                    "name": "uint8",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "728:5:4",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint8",
-                      "typeString": "uint8"
-                    }
-                  },
-                  "nodeType": "Mapping",
-                  "src": "720:26:4",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$552_$",
-                    "typeString": "mapping(uint8 => contract District)"
-                  },
-                  "valueType": {
-                    "contractScope": null,
-                    "id": 882,
-                    "name": "District",
-                    "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 552,
-                    "src": "737:8:4",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_District_$552",
-                      "typeString": "contract District"
                     }
                   }
                 },
@@ -423,29 +608,29 @@
             ],
             "name": "Election",
             "nodeType": "StructDefinition",
-            "scope": 886,
-            "src": "476:295:4",
+            "scope": 1190,
+            "src": "478:304:4",
             "visibility": "public"
           }
         ],
-        "scope": 887,
-        "src": "77:705:4"
+        "scope": 1191,
+        "src": "77:716:4"
       }
     ],
-    "src": "0:782:4"
+    "src": "0:793:4"
   },
   "legacyAST": {
     "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol",
     "exportedSymbols": {
       "Shared": [
-        886
+        1190
       ]
     },
-    "id": 887,
+    "id": 1191,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 855,
+        "id": 1145,
         "literals": [
           "solidity",
           "^",
@@ -458,10 +643,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol",
         "file": "./VoteToken.sol",
-        "id": 856,
+        "id": 1146,
         "nodeType": "ImportDirective",
-        "scope": 887,
-        "sourceUnit": 1097,
+        "scope": 1191,
+        "sourceUnit": 1519,
         "src": "24:25:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -469,10 +654,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol",
         "file": "./District.sol",
-        "id": 857,
+        "id": 1147,
         "nodeType": "ImportDirective",
-        "scope": 887,
-        "sourceUnit": 553,
+        "scope": 1191,
+        "sourceUnit": 723,
         "src": "50:24:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -484,25 +669,69 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 886,
+        "id": 1190,
         "linearizedBaseContracts": [
-          886
+          1190
         ],
         "name": "Shared",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": true,
+            "id": 1150,
+            "name": "parties",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 1190,
+            "src": "98:26:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1148,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "98:5:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "32",
+              "id": 1149,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "123:1:4",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "internal"
+          },
+          {
             "canonicalName": "Shared.Candidate",
-            "id": 868,
+            "id": 1163,
             "members": [
               {
                 "constant": false,
-                "id": 859,
+                "id": 1152,
                 "name": "_address",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "129:16:4",
+                "scope": 1163,
+                "src": "156:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -510,10 +739,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 858,
+                  "id": 1151,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "129:7:4",
+                  "src": "156:7:4",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -525,12 +754,12 @@
               },
               {
                 "constant": false,
-                "id": 861,
+                "id": 1154,
                 "name": "party",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "155:11:4",
+                "scope": 1163,
+                "src": "182:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -538,10 +767,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 860,
+                  "id": 1153,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "155:5:4",
+                  "src": "182:5:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -552,12 +781,12 @@
               },
               {
                 "constant": false,
-                "id": 863,
-                "name": "district",
+                "id": 1156,
+                "name": "districtNo",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "176:14:4",
+                "scope": 1163,
+                "src": "203:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -565,10 +794,10 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 862,
+                  "id": 1155,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
-                  "src": "176:5:4",
+                  "src": "203:5:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint8",
                     "typeString": "uint8"
@@ -579,12 +808,12 @@
               },
               {
                 "constant": false,
-                "id": 865,
+                "id": 1158,
                 "name": "elected",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "209:12:4",
+                "scope": 1163,
+                "src": "238:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -592,10 +821,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 864,
+                  "id": 1157,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "209:4:4",
+                  "src": "238:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -606,12 +835,12 @@
               },
               {
                 "constant": false,
-                "id": 867,
+                "id": 1160,
                 "name": "eliminated",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 868,
-                "src": "231:15:4",
+                "scope": 1163,
+                "src": "260:15:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -619,13 +848,40 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 866,
+                  "id": 1159,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-                  "src": "231:4:4",
+                  "src": "260:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1162,
+                "name": "votes",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1163,
+                "src": "294:12:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 1161,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "294:6:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
                   }
                 },
                 "value": null,
@@ -634,22 +890,184 @@
             ],
             "name": "Candidate",
             "nodeType": "StructDefinition",
-            "scope": 886,
-            "src": "103:172:4",
+            "scope": 1190,
+            "src": "130:183:4",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Shared.DistrictResults",
+            "id": 1172,
+            "members": [
+              {
+                "constant": false,
+                "id": 1165,
+                "name": "districtNo",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1172,
+                "src": "356:16:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 1164,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "356:5:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1168,
+                "name": "candidateResults",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1172,
+                "src": "391:28:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Candidate_$1163_storage_$dyn_storage_ptr",
+                  "typeString": "struct Shared.Candidate[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 1166,
+                    "name": "Candidate",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1163,
+                    "src": "391:9:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Candidate_$1163_storage_ptr",
+                      "typeString": "struct Shared.Candidate"
+                    }
+                  },
+                  "id": 1167,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "391:11:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Candidate_$1163_storage_$dyn_storage_ptr",
+                    "typeString": "struct Shared.Candidate[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1171,
+                "name": "party1stCountVotes",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1172,
+                "src": "429:27:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint32_$dyn_storage_ptr",
+                  "typeString": "uint32[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 1169,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "id": 1170,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "429:8:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint32_$dyn_storage_ptr",
+                    "typeString": "uint32[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "DistrictResults",
+            "nodeType": "StructDefinition",
+            "scope": 1190,
+            "src": "323:140:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Shared.Election",
-            "id": 885,
+            "id": 1189,
             "members": [
               {
                 "constant": false,
-                "id": 870,
+                "id": 1176,
+                "name": "districtContracts",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 1189,
+                "src": "503:44:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$722_$",
+                  "typeString": "mapping(uint8 => contract District)"
+                },
+                "typeName": {
+                  "id": 1175,
+                  "keyType": {
+                    "id": 1173,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "503:26:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$722_$",
+                    "typeString": "mapping(uint8 => contract District)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 1174,
+                    "name": "District",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 722,
+                    "src": "520:8:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_District_$722",
+                      "typeString": "contract District"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1178,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "501:11:4",
+                "scope": 1189,
+                "src": "557:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -657,10 +1075,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 869,
+                  "id": 1177,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "501:6:4",
+                  "src": "557:6:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -671,12 +1089,12 @@
               },
               {
                 "constant": false,
-                "id": 872,
+                "id": 1180,
                 "name": "voteStart",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "522:14:4",
+                "scope": 1189,
+                "src": "578:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -684,10 +1102,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 871,
+                  "id": 1179,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "522:4:4",
+                  "src": "578:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -698,12 +1116,12 @@
               },
               {
                 "constant": false,
-                "id": 874,
+                "id": 1182,
                 "name": "voteEnd",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "546:12:4",
+                "scope": 1189,
+                "src": "602:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -711,10 +1129,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 873,
+                  "id": 1181,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "546:4:4",
+                  "src": "602:4:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -725,27 +1143,27 @@
               },
               {
                 "constant": false,
-                "id": 876,
+                "id": 1184,
                 "name": "voteToken",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "568:19:4",
+                "scope": 1189,
+                "src": "624:19:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_VoteToken_$1096",
+                  "typeIdentifier": "t_contract$_VoteToken_$1518",
                   "typeString": "contract VoteToken"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 875,
+                  "id": 1183,
                   "name": "VoteToken",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 1096,
-                  "src": "568:9:4",
+                  "referencedDeclaration": 1518,
+                  "src": "624:9:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_VoteToken_$1096",
+                    "typeIdentifier": "t_contract$_VoteToken_$1518",
                     "typeString": "contract VoteToken"
                   }
                 },
@@ -754,12 +1172,12 @@
               },
               {
                 "constant": false,
-                "id": 880,
+                "id": 1188,
                 "name": "party1stCountVotes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 885,
-                "src": "606:43:4",
+                "scope": 1189,
+                "src": "662:43:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -767,79 +1185,31 @@
                   "typeString": "mapping(uint8 => uint32)"
                 },
                 "typeName": {
-                  "id": 879,
+                  "id": 1187,
                   "keyType": {
-                    "id": 877,
+                    "id": 1185,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "614:5:4",
+                    "src": "670:5:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "606:24:4",
+                  "src": "662:24:4",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_uint8_$_t_uint32_$",
                     "typeString": "mapping(uint8 => uint32)"
                   },
                   "valueType": {
-                    "id": 878,
+                    "id": 1186,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "623:6:4",
+                    "src": "679:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
-                    }
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 884,
-                "name": "districtContracts",
-                "nodeType": "VariableDeclaration",
-                "overrides": null,
-                "scope": 885,
-                "src": "720:44:4",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$552_$",
-                  "typeString": "mapping(uint8 => contract District)"
-                },
-                "typeName": {
-                  "id": 883,
-                  "keyType": {
-                    "id": 881,
-                    "name": "uint8",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "728:5:4",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint8",
-                      "typeString": "uint8"
-                    }
-                  },
-                  "nodeType": "Mapping",
-                  "src": "720:26:4",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$552_$",
-                    "typeString": "mapping(uint8 => contract District)"
-                  },
-                  "valueType": {
-                    "contractScope": null,
-                    "id": 882,
-                    "name": "District",
-                    "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 552,
-                    "src": "737:8:4",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_District_$552",
-                      "typeString": "contract District"
                     }
                   }
                 },
@@ -849,16 +1219,16 @@
             ],
             "name": "Election",
             "nodeType": "StructDefinition",
-            "scope": 886,
-            "src": "476:295:4",
+            "scope": 1190,
+            "src": "478:304:4",
             "visibility": "public"
           }
         ],
-        "scope": 887,
-        "src": "77:705:4"
+        "scope": 1191,
+        "src": "77:716:4"
       }
     ],
-    "src": "0:782:4"
+    "src": "0:793:4"
   },
   "compiler": {
     "name": "solc",
@@ -873,8 +1243,7 @@
     }
   },
   "schemaVersion": "3.2.2",
-  "updatedAt": "2020-08-27T13:27:00.062Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-09-05T11:37:03.224Z",
   "devdoc": {
     "methods": {}
   },

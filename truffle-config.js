@@ -7,10 +7,11 @@ module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",
-      port: 7545,
-      gasPrice: 0,
+      port: 8545,
+      gas: 99721975,
+      gasPrice: 1,
       network_id: "*", // match any network
-      websockets: true
+      websockets: false
     }
   
   },

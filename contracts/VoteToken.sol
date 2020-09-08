@@ -21,6 +21,11 @@ contract VoteToken is ERC721, Ownable{
         allowedContracts[address(this)] = true;
     }
 
+    function kill() public onlyOwner {
+        //require(msg.sender == owner);
+        selfdestruct(msg.sender);
+    }
+    
     function setAllowed(address _address) public onlyOwner {
         allowedContracts[_address] = true;
     }

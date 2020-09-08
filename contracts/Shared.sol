@@ -4,7 +4,7 @@ import "./District.sol";
 
 
 library Shared {
-    
+    uint8 constant parties = 2;
     struct Candidate{
         address _address;
         uint8 party;
@@ -12,26 +12,31 @@ library Shared {
         
         bool elected;
         bool eliminated;
-        //uint votes;
+        
+        uint32 votes;
     }
     
-    /*struct DistrictResults {
+    struct DistrictResults {
         uint8 districtNo;
         
-        mapping(address => Candidate) candidateResults;
-        mapping(uint8 => uint) party1stCountVotes;
-    }*/
+        Candidate[] candidateResults;
+        uint32[] party1stCountVotes;
+    }
     
     
     struct Election{
+        mapping(uint8 => District) districtContracts;
         string name;
         uint voteStart;
         uint voteEnd;
         VoteToken voteToken;
+        bool concluded;
+        uint8 partyWithMostVotesIndex;
+        uint8 numberOfPartiesContesting;
         
         mapping(uint8 => uint32) party1stCountVotes;
         //mapping(uint8 => DistrictResults) districtResults;
-        mapping(uint8 => District) districtContracts;
+        
     }
    
     
