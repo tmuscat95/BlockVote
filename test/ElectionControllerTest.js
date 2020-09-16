@@ -83,9 +83,18 @@ contract("ElectionController",async (accounts) => {
         assert.equal(_voteStart,election.voteStart);
         assert.equal(_voteEnd,election.voteEnd);
         assert.equal(await electionController.districtsNo(),13);
+        
+        let voteToken = await VoteToken.at(election.voteToken);
+        assert.equal(_name,await voteToken.name());
+        assert.equal(_voteStart,await voteToken.voteStart());
+        assert.equal(_voteEnd,await voteToken.voteEnd());
 
         for(let i=1;i<=13;i++){
+            let districtContract = await District.at(await electionController.getDistrictContract(0,i));
             
+            assert.equal(i,await districtContract.districtNumber());
+            assert.equal(election.voteToken,await districtContract.voteToken());
+
             var districtCandidateAddresses = await electionController.getDistrictCandidateAddresses(0,i);
             console.log(districtCandidateAddresses);
             assert.equal(10,districtCandidateAddresses.length);
@@ -95,15 +104,15 @@ contract("ElectionController",async (accounts) => {
         }
     });
 
-    it("mintVote should increase vote balance of passed address. Should revert if address already has vote",async ()=>{
+    it("mintVote should increase vote balance of controller contract. Should revert if address already has vote",async ()=>{
         let address = await web3.eth.accounts.create().address;
-        await electionController.mintVote(address,1,13,0);
+        await electionController.mintVote(1,13,0);
 
-        let balance = await electionController.balanceOf(address,0);
+        let balance = await electionController.balanceOf(electionController.address,0);
         //console.log(balance.toNumber());
         assert.equal(balance,1);
 
-        await truffleAssert.reverts(electionController.mintVote(address,1,13,0),"Recipient Already has a vote. (balance non 0)");
+        await truffleAssert.reverts(electionController.mintVote(1,13,0),"ERC721: token already minted.");
         
         let election = await electionController.elections(0);
         //console.log(election);

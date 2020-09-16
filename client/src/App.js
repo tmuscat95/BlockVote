@@ -5,7 +5,25 @@ import getWeb3 from "./getWeb3";
 import Main from "./contracts/Main.json"
 import "./App.css";
 
+import {drizzleConnect} from "@drizzle/react-plugin";
+import {ContractData, ContractForm, LoadingContainer} from "drizzle-react-components";
+
 class App extends Component {
+
+  render(){
+    return(
+      <LoadingContainer>
+        <div>
+          <p>
+            Election Control Panel
+          </p>
+        </div>
+        <ContractForm contract="ElectionController" method="launchElection"/>
+      </LoadingContainer>
+    );
+  }
+
+  /*
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
   componentDidMount = async () => {
@@ -50,6 +68,14 @@ class App extends Component {
   };
 
   render() {
+    const {drizzleStatus,accounts} = this.props;
+
+    if(drizzleStatus.initialized){
+      return(
+
+      );
+    }
+    
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
@@ -68,7 +94,9 @@ class App extends Component {
         <div>The stored value is: {this.state.storageValue}</div>
       </div>
     );
-  }
+
+    
+  }*/
 }
 
 export default App;

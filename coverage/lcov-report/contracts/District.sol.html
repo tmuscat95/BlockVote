@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/District.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> District.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/76</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.6.0;
+pragma experimental ABIEncoderV2;
+&nbsp;
+//import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
+import "./VoteToken.sol";
+import "./Shared.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+&nbsp;
+contract District is Ownable{
+    VoteToken internal voteToken;
+    uint8 public districtNumber;
+    //uint public eligibleVotes ;
+    uint32 public castVotes;
+    //uint32 internal uncountedVotes;
+    uint8 constant public seats = 5;
+    uint8 public seatsFilled;
+    uint32 public quota;
+    
+    //Shared.DistrictResults internal results;
+    mapping(address =&gt; Shared.Candidate) public candidates;
+    address[] public candidateAddresses;
+    uint8 public candidatesCount;
+    mapping(uint8 =&gt; uint32) public party1stCountVotes;
+    address[] electedCandidates;
+    
+    bool public counted = false;
+&nbsp;
+    Shared.DistrictResults internal districtResults;
+&nbsp;
+&nbsp;
+    event Vote(address _voter, uint8 districtNo, uint32 castVotes);
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor(uint8 _districtNumber, Shared.Candidate[] memory _candidates/*, VoteToken _voteToken*/) Ownable() public{</span>
+        //voteToken = _voteToken;
+<span class="cstat-no" title="statement not covered" >        districtNumber = _districtNumber</span>;
+        //eligibleVotes = _eligibleVotes;
+<span class="cstat-no" title="statement not covered" >        castVotes = 0</span>;
+<span class="cstat-no" title="statement not covered" >        candidatesCount = uint8(_candidates.length)</span>;
+        
+<span class="cstat-no" title="statement not covered" >        for(uint8 i = 0; i &lt; candidatesCount; i++){</span>
+<span class="cstat-no" title="statement not covered" >            candidateAddresses.push(_candidates[i]._address)</span>;
+<span class="cstat-no" title="statement not covered" >            candidates[_candidates[i]._address] = _candidates[i]</span>;
+        }
+    }
+    
+<span class="fstat-no" title="function not covered" >    function setVoteToken(VoteToken _voteToken) public onlyOwner{</span>
+<span class="cstat-no" title="statement not covered" >        voteToken = _voteToken</span>;
+    }
+    /*function getVoterTurnout() public view returns(uint){
+        return castVotes/eligibleVotes;
+    }*/
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getCandidateAddresses() public view returns(address[] memory){</span>
+<span class="cstat-no" title="statement not covered" >        return candidateAddresses;</span>
+    }
+    
+<span class="fstat-no" title="function not covered" >    function vote(uint256 tokenId, address[] memory _preferences) public {</span>
+<span class="cstat-no" title="statement not covered" >        require(voteToken.district(tokenId) == districtNumber,"Incorrect District")</span>;
+<span class="cstat-no" title="statement not covered" >        for(uint8 i = 0; i &lt; _preferences.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >            require(candidates[_preferences[i]]._address != address(0), "Voted for candidate not from this district. Vote Rejected.")</span>;
+//WRITE TEST FOR ABOVE LINE ^^^
+<span class="cstat-no" title="statement not covered" >        voteToken.transferFrom(msg.sender,address(this),tokenId)</span>;
+<span class="cstat-no" title="statement not covered" >        voteToken.setVotePreferences(tokenId, _preferences)</span>;
+<span class="cstat-no" title="statement not covered" >        castVotes += 1</span>;
+<span class="cstat-no" title="statement not covered" >        emit Vote(msg.sender, districtNumber, castVotes);</span>
+    }
+    
+    
+    /*function onERC721Received(address operator, address from, uint256 tokenId, bytes calldata data) external override returns (bytes4){
+        require(voteToken.district(tokenId) == districtNumber,"Incorrect District");
+&nbsp;
+   }*/
+&nbsp;
+<span class="fstat-no" title="function not covered" >   function getAddresses() public view returns(address[] memory) {</span>
+<span class="cstat-no" title="statement not covered" >       return candidateAddresses;</span>
+   }
+&nbsp;
+    /*function getResults() public returns(Shared.DistrictResults memory) {
+        require(counted,"Votes have not yet been tallied for this district.");
+        return districtResults;
+    }*/
+&nbsp;
+<span class="fstat-no" title="function not covered" >   function getQuota() public view returns(uint32){</span>
+       //quota = (castVotes/(seats+1)) + 1;
+<span class="cstat-no" title="statement not covered" >       return (castVotes/(seats+1)) + 1;</span>
+   }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAllElected() public returns(address[] memory){</span>
+<span class="cstat-no" title="statement not covered" >        if(electedCandidates.length==0){</span>
+        
+<span class="cstat-no" title="statement not covered" >            for(uint8 i = 0; i &lt; candidatesCount; i++){</span>
+<span class="cstat-no" title="statement not covered" >                if(candidates[candidateAddresses[i]].elected == true)</span>
+<span class="cstat-no" title="statement not covered" >                    electedCandidates.push(candidates[candidateAddresses[i]]._address)</span>;
+            }
+        
+        }
+<span class="cstat-no" title="statement not covered" >        return electedCandidates;</span>
+    }
+    
+<span class="fstat-no" title="function not covered" >    function kill() public onlyOwner {</span>
+        //require(msg.sender == owner);
+<span class="cstat-no" title="statement not covered" >        selfdestruct(msg.sender)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function transferAllBack(address _from) public {</span>
+<span class="cstat-no" title="statement not covered" >        voteToken.transferAllBack(_from)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function countVotes() public{</span>
+<span class="cstat-no" title="statement not covered" >        uint8 seatsRemaining = seats;</span> //number of seats which have not yet been filled.
+<span class="cstat-no" title="statement not covered" >        castVotes = uint32(voteToken.balanceOf(address(this)))</span>;
+        //uncountedVotes = castVotes;
+<span class="cstat-no" title="statement not covered" >        quota = getQuota()</span>;
+        
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (uint8 j = 1; j &lt;= candidatesCount; j++){ //the number of candidates being the theoretical maximum preferences a voter can select.</span>
+<span class="cstat-no" title="statement not covered" >            bool noMoreRounds = true;</span> //will be set to false if it is found that for a given preference number j, no voter has selected a preference this high, and signal to terminate the counting process.
+<span class="cstat-no" title="statement not covered" >            bool candidateElected = false; </span>
+            //whether in this round of counting at least one seat has been filled. 
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            uint32 uncountedVotes = uint32(voteToken.balanceOf(address(this)));</span>
+<span class="cstat-no" title="statement not covered" >            uint256[] memory voteTokenIDs = new uint256[](uncountedVotes);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            for (uint32 i = 0; i &lt; uncountedVotes; i++){</span>
+<span class="cstat-no" title="statement not covered" >                uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i);</span>
+<span class="cstat-no" title="statement not covered" >                voteTokenIDs[i] = voteTokenID</span>;
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            for (uint32 i = 0; i &lt; voteTokenIDs.length; i++){</span>
+                //uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i);
+<span class="cstat-no" title="statement not covered" >                uint256 voteTokenID = voteTokenIDs[i];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                address candidateAddress = voteToken.preferences(voteTokenID,j);</span>
+<span class="cstat-no" title="statement not covered" >                if(candidateAddress == address(0))</span>
+                    continue;
+                else
+<span class="cstat-no" title="statement not covered" >                    noMoreRounds = false</span>;
+                
+               /* else
+                    noMoreRounds = false;*/
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if(j==1)</span>
+<span class="cstat-no" title="statement not covered" >                    party1stCountVotes[candidates[candidateAddress].party] += 1</span>;
+                
+<span class="cstat-no" title="statement not covered" >                uint32 voteBalance = uint32(voteToken.balanceOf(candidateAddress));</span>
+                
+                
+<span class="cstat-no" title="statement not covered" >                if(voteBalance == quota-1 &amp;&amp; candidates[candidateAddress].eliminated == false){</span>
+<span class="cstat-no" title="statement not covered" >                    voteToken.transferFrom(address(this), candidateAddress, voteTokenID)</span>;
+<span class="cstat-no" title="statement not covered" >                    candidates[candidateAddress].elected = true</span>;
+<span class="cstat-no" title="statement not covered" >                    candidateElected = true</span>;
+<span class="cstat-no" title="statement not covered" >                    electedCandidates.push(candidateAddress)</span>;
+<span class="cstat-no" title="statement not covered" >                    if(--seatsRemaining == 0)</span>
+                        break;
+                }
+                else <span class="cstat-no" title="statement not covered" >if(candidates[candidateAddress].elected == false &amp;&amp; candidates[candidateAddress].eliminated == false){</span>
+<span class="cstat-no" title="statement not covered" >                    voteToken.transferFrom(address(this), candidateAddress, voteTokenID)</span>;
+                }
+                else <span class="cstat-no" title="statement not covered" >if(candidates[candidateAddress].elected == true || candidates[candidateAddress].eliminated == true){</span>
+                    continue;
+                }
+                //voteBalance = uint32(voteToken.balanceOf(candidateAddress));
+                /*
+                else {
+                    if(voteBalance &lt; currentLeastVotes){
+                        currentLeastVotes = voteBalance;
+                        currentCandidateWithLeastVotes = candidateAddress;
+                    }
+                    continue;
+                }
+                
+                if(voteBalance+1 &lt; currentLeastVotes || currentLeastVotes == -1){
+                        currentLeastVotes = voteBalance+1;
+                        currentCandidateWithLeastVotes = candidateAddress;
+                    }
+                   */
+            }    
+            
+<span class="cstat-no" title="statement not covered" >            if(noMoreRounds || seatsRemaining == 0) </span>
+                break;
+            else <span class="cstat-no" title="statement not covered" >if(candidateElected)</span>
+                continue;
+&nbsp;
+            /*If no candidate was elected this round of counting, we eliminate candidate with least votes and transfer their votes back to the district contract for next preference counting.*/
+<span class="cstat-no" title="statement not covered" >            address currentCandidateWithLeastVotes = candidateAddresses[0];</span>
+<span class="cstat-no" title="statement not covered" >            uint32 currentLeastVotes = uint32(voteToken.balanceOf(currentCandidateWithLeastVotes));</span>
+            /*In STV, the candidate to be eliminated is selected randomly if 2 or more candidates are
+            tied for least amount of votes; This would be expensive to implement on chain, so to eliminate bias, the addresses passed as candidateAddresses to the District constructor should
+            be "shuffled" off-chain before being passed. */
+<span class="cstat-no" title="statement not covered" >            for (uint8 k = 1; k &lt; candidatesCount; k++){</span>
+<span class="cstat-no" title="statement not covered" >                uint32 _balance = uint32(voteToken.balanceOf(candidateAddresses[k]));</span>
+<span class="cstat-no" title="statement not covered" >                address _candidateAddress = candidateAddresses[k];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if(_balance &lt; currentLeastVotes &amp;&amp; candidates[_candidateAddress].eliminated == false &amp;&amp; candidates[_candidateAddress].elected ==false ){</span>
+<span class="cstat-no" title="statement not covered" >                    currentCandidateWithLeastVotes = _candidateAddress</span>;
+<span class="cstat-no" title="statement not covered" >                    currentLeastVotes = _balance</span>;
+                }
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            candidates[currentCandidateWithLeastVotes].eliminated = true</span>;
+<span class="cstat-no" title="statement not covered" >            if(currentLeastVotes&gt;0)</span>
+<span class="cstat-no" title="statement not covered" >                voteToken.transferAllBack(currentCandidateWithLeastVotes)</span>;
+           
+            
+            
+        }
+        
+<span class="cstat-no" title="statement not covered" >        seatsFilled = seats - seatsRemaining</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for(uint8 i = 0; i&lt;candidateAddresses.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >            candidates[candidateAddresses[i]].votes = uint32(voteToken.balanceOf(candidateAddresses[i]))</span>;
+<span class="cstat-no" title="statement not covered" >            districtResults.candidateResults.push(candidates[candidateAddresses[i]])</span>;
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint8 k = 0;</span>
+<span class="cstat-no" title="statement not covered" >        while(party1stCountVotes[k]&gt;0){</span>
+<span class="cstat-no" title="statement not covered" >            districtResults.party1stCountVotes = new uint8[](Shared.parties)</span>;
+<span class="cstat-no" title="statement not covered" >            districtResults.party1stCountVotes[k] = party1stCountVotes[k++]</span>;
+        }
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        counted = true</span>;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Sep 13 2020 12:22:25 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -7,7 +7,7 @@ import "./Shared.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract District is Ownable{
-    VoteToken internal voteToken;
+    VoteToken public voteToken;
     uint8 public districtNumber;
     //uint public eligibleVotes ;
     uint32 public castVotes;
@@ -133,7 +133,7 @@ contract District is Ownable{
 
                 address candidateAddress = voteToken.preferences(voteTokenID,j);
                 if(candidateAddress == address(0))
-                    break;
+                    continue;
                 else
                     noMoreRounds = false;
                 
@@ -160,7 +160,7 @@ contract District is Ownable{
                 else if(candidates[candidateAddress].elected == true || candidates[candidateAddress].eliminated == true){
                     continue;
                 }
-                voteBalance = uint32(voteToken.balanceOf(candidateAddress));
+                //voteBalance = uint32(voteToken.balanceOf(candidateAddress));
                 /*
                 else {
                     if(voteBalance < currentLeastVotes){

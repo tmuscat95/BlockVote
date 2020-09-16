@@ -66,12 +66,22 @@ contract ElectionController is Ownable{
         
         for(uint8 i = 1 ; i <= districtsNo; i++){
             District d = districtFactory.create(i, candidates[i-1]);
+            elections[elections.length-1].voteToken.setApprovalForAll(address(d),true);
             elections[elections.length-1].districtContracts[i] = d;
             elections[elections.length-1].voteToken.setAllowed(address(elections[elections.length-1].districtContracts[i]));
             elections[elections.length-1].districtContracts[i].setVoteToken(elections[elections.length-1].voteToken);
         
         }
  
+    }
+
+    function vote(uint8 _electionNo, uint256 _voteTokenID, address[] memory _preferences) public onlyOwner {
+        uint8 districtNo = elections[_electionNo].voteToken.district(_voteTokenID);
+        require(districtNo != 0,"Invalid Vote Token.");
+        District _district = elections[_electionNo].districtContracts[districtNo];
+        //voteToken.setApprovalForAll(_district,true);
+        _district.vote(_voteTokenID,_preferences);
+
     }
     
     function balanceOf(address _address, uint16 _election) public view returns(uint256){
@@ -87,8 +97,8 @@ contract ElectionController is Ownable{
         return elections[_election].districtContracts[_district];
     }
 
-    function mintVote(address _to, uint256 _tokenId, uint8 _districtNo, uint32 _electionNo) public onlyOwner {
-        elections[_electionNo].voteToken.mint(_to, _tokenId, _districtNo);
+    function mintVote(uint256 _tokenId, uint8 _districtNo, uint32 _electionNo) public onlyOwner {
+        elections[_electionNo].voteToken.mint(address(this), _tokenId, _districtNo);
 
     }
     

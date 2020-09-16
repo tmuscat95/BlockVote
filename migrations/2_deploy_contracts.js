@@ -7,7 +7,7 @@ var Shared = artifacts.require("./Shared.sol");
 var VoteToken = artifacts.require("./VoteToken.sol");
 
 module.exports = async function(deployer) {
-  //deployer.deploy(SimpleStorage);
+  await deployer.deploy(SimpleStorage);
   await deployer.deploy(Shared);
   //deployer.deploy(VoteToken);
   //cleadeployer.deploy(District);

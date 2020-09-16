@@ -74,10 +74,10 @@ contract("ElectionController",async (accounts) => {
 
         //console.log(candidates);
         await electionController.launchElection(_name,_voteStart,_voteEnd,numberOfPartiesContesting,candidates);
+        
         var election = await electionController.elections(0);
         var voteToken = await VoteToken.at(election.voteToken);
-        //console.log(election);
-        //console.log(voteToken);
+        
 
         var id = 0;
         for(let i = 0; i<13; i++){
@@ -88,38 +88,21 @@ contract("ElectionController",async (accounts) => {
             
             for(let j = 0; j<2;j++){
                 //2 votes for party 1 on each district, for 5 candidates from party 1
-                await electionController.mintVote(accounts[0], ++id, i+1,0);
-                await voteToken.setApprovalForAll(district.address,true);
-                await district.vote(id,candidateAddresses[i].slice(5,10));
+                await electionController.mintVote(++id, i+1,0);
+                //await voteToken.setApprovalForAll(district.address,true);
+                await electionController.vote(0,id,candidateAddresses[i].slice(5,10));
                 const mu = process.memoryUsage();
                 console.log(mu);
             }
-
-            /*
-            for(let j = 0; j<1;j++){
-                //2 votes for party 1 on each district, for 5 candidates from party 1
-                await electionController.mintVote(accounts[0], ++id, i+1,0);
-                await voteToken.setApprovalForAll(district.address,true);
-                await district.vote(id,candidateAddresses[i].slice(0,5));
-                const mu = process.memoryUsage();
-                console.log(mu);
-            }*/
-
          
         }
 
 
-           //1 vote for party 0 on each district, for 5 candidates from party 0
         
         let d = await electionController.getDistrictContract(0,1);
-           //console.log(d);
-        let district = await District.at(d);
-        await electionController.mintVote(accounts[0], ++id, 1,0);
-        await voteToken.setApprovalForAll(district.address,true);/*
-        await district.vote(id,candidateAddresses[0].slice(0,1));
-        const mu = process.memoryUsage();
-        console.log(mu);
-        console.log(candidateAddresses[0].slice(0,5));*/
+
+        //let district = await District.at(d);
+        await electionController.mintVote(++id, 1,0);
 
         election = await electionController.elections(0);
         console.log(election);
@@ -128,6 +111,7 @@ contract("ElectionController",async (accounts) => {
         await electionController.endElection(0);
        
         election = await electionController.elections(0);
+        
         console.log(election);
         assert.equal(election.partyWithMostVotesIndex,1);
         

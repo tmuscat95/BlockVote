@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/ElectionController.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> ElectionController.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/28</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.6.0;
+pragma experimental ABIEncoderV2;
+&nbsp;
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./VoteToken.sol";
+import "./Shared.sol";
+import "./District.sol";
+import "./DistrictFactory.sol";
+import "./VoteTokenFactory.sol";
+&nbsp;
+&nbsp;
+contract ElectionController is Ownable{
+&nbsp;
+    Shared.Election[] public elections;
+    uint8 public districtsNo;
+    DistrictFactory internal districtFactory;
+    VoteTokenFactory internal voteTokenFactory;
+    
+    constructor(uint8 _districtsNo, DistrictFactory _districtFactory, VoteTokenFactory _voteTokenFactory) Ownable() public payable{
+        districtsNo = _districtsNo;
+        districtFactory = _districtFactory;
+        voteTokenFactory = _voteTokenFactory;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function endElection(uint8 _electionNo) external{</span>
+        //Shared.Election storage election = elections[_electionNo]; //storage in order to copy by reference.
+<span class="cstat-no" title="statement not covered" >        uint8 partyWithMostVotesIndex;</span>
+<span class="cstat-no" title="statement not covered" >        uint32 mostVotes;</span>
+        
+<span class="cstat-no" title="statement not covered" >        for(uint8 i = 1; i &lt;= districtsNo; i++){</span>
+            //require(election.districtContracts[i].counted() == true, string(abi.encodePacked("Hasn't Counted Yet: ",i)));
+<span class="cstat-no" title="statement not covered" >            elections[_electionNo].districtContracts[i].countVotes()</span>;
+<span class="cstat-no" title="statement not covered" >            require(elections[_electionNo].districtContracts[i].counted() == true, string(abi.encodePacked("Counting failed for district: ",i)))</span>;
+            //election.districtContracts[i].getAllElected();
+            
+<span class="cstat-no" title="statement not covered" >            for(uint8 j = 0; j &lt; elections[_electionNo].numberOfPartiesContesting ;j++){</span>
+                
+<span class="cstat-no" title="statement not covered" >                uint32 _votes = uint32(elections[_electionNo].districtContracts[i].party1stCountVotes(j));</span>
+                
+                /*if(_votes == 0)
+                    break;*/
+                
+<span class="cstat-no" title="statement not covered" >                elections[_electionNo].party1stCountVotes[j] += _votes</span>;
+<span class="cstat-no" title="statement not covered" >                if(elections[_electionNo].party1stCountVotes[j] &gt; mostVotes){</span>
+<span class="cstat-no" title="statement not covered" >                    mostVotes = elections[_electionNo].party1stCountVotes[j]</span>;
+<span class="cstat-no" title="statement not covered" >                    partyWithMostVotesIndex = j</span>;
+                }
+            }
+        }
+        
+<span class="cstat-no" title="statement not covered" >        elections[_electionNo].partyWithMostVotesIndex = partyWithMostVotesIndex</span>;
+<span class="cstat-no" title="statement not covered" >        elections[_electionNo].concluded = true</span>;
+    }
+    
+<span class="fstat-no" title="function not covered" >    function launchElection (</span>
+        string memory _name,
+        uint _voteStart,
+        uint _voteEnd,
+        uint8 numberOfPartiesContesting,
+        Shared.Candidate[][] memory candidates
+        ) public onlyOwner{
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        VoteToken _voteToken = voteTokenFactory.create(_name,_voteStart,_voteEnd);</span>
+<span class="cstat-no" title="statement not covered" >        elections.push(Shared.Election({name: _name, voteStart: _voteStart, voteEnd: _voteEnd, voteToken: _voteToken, concluded:false, partyWithMostVotesIndex:255, numberOfPartiesContesting: uint8(candidates.length)}))</span>;
+        
+        
+<span class="cstat-no" title="statement not covered" >        for(uint8 i = 1 ; i &lt;= districtsNo; i++){</span>
+<span class="cstat-no" title="statement not covered" >            District d = districtFactory.create(i, candidates[i-1]);</span>
+<span class="cstat-no" title="statement not covered" >            elections[elections.length-1].districtContracts[i] = d</span>;
+<span class="cstat-no" title="statement not covered" >            elections[elections.length-1].voteToken.setAllowed(address(elections[elections.length-1].districtContracts[i]))</span>;
+<span class="cstat-no" title="statement not covered" >            elections[elections.length-1].districtContracts[i].setVoteToken(elections[elections.length-1].voteToken)</span>;
+        
+        }
+ 
+    }
+    
+<span class="fstat-no" title="function not covered" >    function balanceOf(address _address, uint16 _election) public view returns(uint256){</span>
+<span class="cstat-no" title="statement not covered" >        return elections[_election].voteToken.balanceOf(_address);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDistrictCandidateAddresses(uint8 _election,uint8 _district)  public view returns(address[] memory){</span>
+<span class="cstat-no" title="statement not covered" >        address[] memory addresses = elections[_election].districtContracts[_district].getCandidateAddresses();</span>
+<span class="cstat-no" title="statement not covered" >        return addresses;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDistrictContract(uint8 _election, uint8 _district) public view returns(District){</span>
+<span class="cstat-no" title="statement not covered" >        return elections[_election].districtContracts[_district];</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function mintVote(address _to, uint256 _tokenId, uint8 _districtNo, uint32 _electionNo) public onlyOwner {</span>
+<span class="cstat-no" title="statement not covered" >        elections[_electionNo].voteToken.mint(_to, _tokenId, _districtNo)</span>;
+&nbsp;
+    }
+    
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Sep 13 2020 12:22:25 GMT+0200 (Central European Summer Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

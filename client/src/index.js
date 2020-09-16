@@ -1,10 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {DrizzleContext} from "@drizzle/react-plugin";
+import { Drizzle } from "@drizzle/store";
+import drizzleOptions from './drizzleOptions.js';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const drizzle = new Drizzle(drizzleOptions);
+
+ReactDOM.render(
+<DrizzleContext.Provider drizzle = {drizzle}>
+    <App />
+</DrizzleContext.Provider>
+, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

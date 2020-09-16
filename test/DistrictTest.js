@@ -67,6 +67,15 @@ contract("District" , async accounts => {
         assert.equal(await district.castVotes(),1);
     });
 
+    it("Vote function reverts when attempting to vote with a VoteToken instance having the incorrect district number (12). And does not increase cast votes count. ie: voting fails", async () => {
+        let tokenId = 1;
+        voteToken.mint(accounts[0], tokenId, 12);
+        voteToken.setApprovalForAll(district.address,true);
+
+        await truffleAssert.reverts(district.vote(tokenId,candidateAddresses.slice(0,5)),reason="Incorrect District." , message="Does not revert vote function transaction on receiving a token with incorrect district number.");
+        assert.equal(await district.castVotes(),0);
+    });
+
     it("Vote function sets voting preferences correctly", async () => {
         let tokenId = 1;
         voteToken.mint(accounts[0], tokenId, 13);
@@ -81,14 +90,6 @@ contract("District" , async accounts => {
         }
     });
 
-    it("Vote function reverts when attempting to vote with a VoteToken instance having the incorrect district number. (13)", async () => {
-        voteToken.mint(accounts[0], 1, 12);
-        voteToken.setApprovalForAll(district.address,true);
-
-        await truffleAssert.reverts(district.vote(1,candidateAddresses.slice(0,5)),"Incorrect District", "Does not Revert vote function transaction on receiving a token with incorrect district number.");
-
-
-    });
 
     it("getQuota() returns correct values", async () => {
        //By mathematical induction
