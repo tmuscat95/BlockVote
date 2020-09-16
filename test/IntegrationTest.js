@@ -226,7 +226,7 @@ const schema = {
 
 
 contract("ElectionController", async (accounts) => {
-    const officialVotes = 299959;
+    const officialVotes = 305556;
     const districtsNo = 13;
     const parties = ['PL','PN','AD'];
 
@@ -257,6 +257,7 @@ contract("ElectionController", async (accounts) => {
         }
     }
 
+    
     candidates = JSON.parse(fs.readFileSync(__dirname+'/candidates.json').toString());
     candidateAddresses = JSON.parse(fs.readFileSync(__dirname+'/candidateAddresses.json').toString());
     voteTokenIDs = JSON.parse(fs.readFileSync(__dirname+'/voteTokenIDs.json').toString());
@@ -317,18 +318,22 @@ contract("ElectionController", async (accounts) => {
             }
 
             await electionController.launchElection(_name,_voteStart,_voteEnd,numberOfPartiesContesting,candidates);
-            
-            for(let i = 0; i<numberOfVotesEachDistrict.length; i++){
-                await createVoteToken(electionController,i+1,numberOfVotesEachDistrict[i]);
-                
-            }
-
+            fs.writeFileSync(__dirname+'/electionControllerAddress.json',JSON.stringify(electionController.address));
             fs.writeFileSync(__dirname+'/candidates.json',JSON.stringify(candidates));
             fs.writeFileSync(__dirname+'/candidateAddresses.json',JSON.stringify(candidateAddresses));
-            fs.writeFileSync(__dirname+'/voteTokenIDs.json',JSON.stringify(voteTokenIDs));
             fs.writeFileSync(__dirname+'/addressToName.json',JSON.stringify(addressToName));
             fs.writeFileSync(__dirname+'/addressToParty.json',JSON.stringify(addressToParty));
-            fs.writeFileSync(__dirname+'/electionControllerAddress.json',JSON.stringify(electionController.address));
+
+            for(let i = 0; i<numberOfVotesEachDistrict.length; i++){
+                await createVoteToken(electionController,i+1,numberOfVotesEachDistrict[i]);
+                fs.writeFileSync(__dirname+'/voteTokenIDs'+(i+1)+'.json',JSON.stringify([voteTokenIDs[i]]));
+            }
+
+            fs.writeFileSync(__dirname+'/voteTokenIDs.json',JSON.stringify(voteTokenIDs));
+
+        }
+        else{
+            electionController = await ElectionController.at(JSON.parse(fs.readFileSync(__dirname+'/electionControllerAddress.json').toString()));
         }
     });
 
