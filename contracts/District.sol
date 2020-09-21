@@ -5,12 +5,18 @@ pragma experimental ABIEncoderV2;
 import "./VoteToken.sol";
 import "./Shared.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract District is Ownable{
+    using SafeMath for uint256;
+    using SafeMath for uint32;
+    using SafeMath for uint8;
+    using SafeMath for uint;
+
     VoteToken public voteToken;
     uint8 public districtNumber;
     //uint public eligibleVotes ;
-    uint32 public castVotes;
+    uint public castVotes;
     //uint32 internal uncountedVotes;
     uint8 constant public seats = 5;
     uint8 public seatsFilled;
@@ -20,7 +26,7 @@ contract District is Ownable{
     mapping(address => Shared.Candidate) public candidates;
     address[] public candidateAddresses;
     uint8 public candidatesCount;
-    mapping(uint8 => uint32) public party1stCountVotes;
+    mapping(uint8 => uint64) public party1stCountVotes;
     address[] electedCandidates;
     
     bool public counted = false;
@@ -28,7 +34,7 @@ contract District is Ownable{
     Shared.DistrictResults internal districtResults;
 
 
-    event Vote(address _voter, uint8 districtNo, uint32 castVotes);
+    event Vote(address _voter, uint8 districtNo, uint castVotes);
 
     constructor(uint8 _districtNumber, Shared.Candidate[] memory _candidates/*, VoteToken _voteToken*/) Ownable() public{
         //voteToken = _voteToken;
@@ -54,11 +60,12 @@ contract District is Ownable{
         return candidateAddresses;
     }
     
-    function vote(uint256 tokenId, address[] memory _preferences) public {
+    function vote(uint256 tokenId, address[] memory _preferences) public onlyOwner {
         require(voteToken.district(tokenId) == districtNumber,"Incorrect District");
+
         for(uint8 i = 0; i < _preferences.length; i++)
             require(candidates[_preferences[i]]._address != address(0), "Voted for candidate not from this district. Vote Rejected.");
-//WRITE TEST FOR ABOVE LINE ^^^
+        
         voteToken.transferFrom(msg.sender,address(this),tokenId);
         voteToken.setVotePreferences(tokenId, _preferences);
         castVotes += 1;
@@ -82,7 +89,7 @@ contract District is Ownable{
 
    function getQuota() public view returns(uint32){
        //quota = (castVotes/(seats+1)) + 1;
-       return (castVotes/(seats+1)) + 1;
+       return uint32((castVotes/(seats + 1)) + 1);
    }
 
 
@@ -103,37 +110,58 @@ contract District is Ownable{
         selfdestruct(msg.sender);
     }
 
-    function transferAllBack(address _from) public {
+    function transferAllBack(address _from) private {
         voteToken.transferAllBack(_from);
     }
 
-    function countVotes() public{
+    function countVotes() public onlyOwner{
         uint8 seatsRemaining = seats; //number of seats which have not yet been filled.
-        castVotes = uint32(voteToken.balanceOf(address(this)));
-        //uncountedVotes = castVotes;
+        castVotes = voteToken.balanceOf(address(this));
         quota = getQuota();
         
-
-        for (uint8 j = 1; j <= candidatesCount; j++){ //the number of candidates being the theoretical maximum preferences a voter can select.
-            bool noMoreRounds = true; //will be set to false if it is found that for a given preference number j, no voter has selected a preference this high, and signal to terminate the counting process.
+        for (uint8 j = 1; j <= candidatesCount; j++){ 
+            /*the number of candidates being the theoretical maximum preferences a voter can select, and therefore the theoretical maximum possible number of rounds.*/
+            bool noMoreRounds = true; 
+            //Will remain set to true if it is found that for a given round of counting j, no voter has selected a preference this high, and signal to terminate the counting process.
             bool candidateElected = false; 
             //whether in this round of counting at least one seat has been filled. 
+            uint uncountedVotes = voteToken.balanceOf(address(this));
+            //uint256[] memory voteTokenIDs = new uint256[](uncountedVotes);
 
-            uint32 uncountedVotes = uint32(voteToken.balanceOf(address(this)));
-            uint256[] memory voteTokenIDs = new uint256[](uncountedVotes);
-
-            for (uint32 i = 0; i < uncountedVotes; i++){
+            /*for (uint32 i = 0; i < uncountedVotes; i++){
                 uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i);
                 voteTokenIDs[i] = voteTokenID;
-            }
+            }*/
 
-            for (uint32 i = 0; i < voteTokenIDs.length; i++){
-                //uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i);
-                uint256 voteTokenID = voteTokenIDs[i];
+            /*for (uint i = 0; i < uncountedVotes; i++)*/
+            uint8 i=0; 
+            /*
+            i: "pointer" value which indicates which indicates the index of the token that will be counted, starts at 0 at each round of counting and increases by 1 when a vote is encountered that cannot be
+            counted this round.
+            Reminder that in ERC721 implementing IERC721enumerable and using the Openzeppelin EnumerableSet library, when a token is removed from an address' balance, the last token in
+            the Enumerable list of tokens swaps places with the removed token in the enumerate list, with the last index of the array being popped off, and the arrays length reduced by 1.
+            
+            When a vote is encountered where the jth preference is a candidate that is elected or eliminated, or not marked; ie their vote will be transferred to the next j+1th
+            round of counting, the pointer value i is incremented by 1 for this round and the loop is moved forward one iteration. 
+            In the next iteration, the token at index i + 1 will be counted, with the process above repeating itself if this vote also cannot be counted in this round.
 
+            When i becomes == the remaining balance (uncountedVotes) it means there are no more votes left to count this round and the loop will end.
+            When the balance is reduced to 0, the inner while loop ends  
+            */
+            while(uncountedVotes > 0 && i < uncountedVotes){
+                uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i); 
+                //uint256 voteTokenID = voteTokenIDs[i];
+
+                /*
+                If a vote is uncounted by the jth round of counting, and the voter only marked j-1 preferences,
+                ie: the voter's preferences from 1 to j-1 have all been elected or eliminated by the time the vote is counted,
+                the vote is said to be non-transferable and is effectively discarded. In reality, it remains in the District contract balance.
+                */
                 address candidateAddress = voteToken.preferences(voteTokenID,j);
-                if(candidateAddress == address(0))
+                if(candidateAddress == address(0)){
+                    i++;
                     continue;
+                }
                 else
                     noMoreRounds = false;
                 
@@ -142,8 +170,12 @@ contract District is Ownable{
 
                 if(j==1)
                     party1stCountVotes[candidates[candidateAddress].party] += 1;
+                    /*
+                    Party 1st count votes balance increases regardless of whether the vote actually ends up at the 1st preference candidate or 
+                    is transferred to another candidate, potentially of a different party.
+                    */
                 
-                uint32 voteBalance = uint32(voteToken.balanceOf(candidateAddress));
+                uint voteBalance = voteToken.balanceOf(candidateAddress);
                 
                 
                 if(voteBalance == quota-1 && candidates[candidateAddress].eliminated == false){
@@ -151,31 +183,21 @@ contract District is Ownable{
                     candidates[candidateAddress].elected = true;
                     candidateElected = true;
                     electedCandidates.push(candidateAddress);
-                    if(--seatsRemaining == 0)
+                    uncountedVotes = voteToken.balanceOf(address(this));
+                    --seatsRemaining;
+                    if(seatsRemaining == 0)
                         break;
                 }
                 else if(candidates[candidateAddress].elected == false && candidates[candidateAddress].eliminated == false){
                     voteToken.transferFrom(address(this), candidateAddress, voteTokenID);
+                    uncountedVotes = voteToken.balanceOf(address(this));
                 }
                 else if(candidates[candidateAddress].elected == true || candidates[candidateAddress].eliminated == true){
+                    // move pointer forward
+                    i++;
                     continue;
                 }
-                //voteBalance = uint32(voteToken.balanceOf(candidateAddress));
-                /*
-                else {
-                    if(voteBalance < currentLeastVotes){
-                        currentLeastVotes = voteBalance;
-                        currentCandidateWithLeastVotes = candidateAddress;
-                    }
-                    continue;
-                }
-                
-                if(voteBalance+1 < currentLeastVotes || currentLeastVotes == -1){
-                        currentLeastVotes = voteBalance+1;
-                        currentCandidateWithLeastVotes = candidateAddress;
-                    }
-                   */
-            }    
+            }
             
             if(noMoreRounds || seatsRemaining == 0) 
                 break;
@@ -184,23 +206,25 @@ contract District is Ownable{
 
             /*If no candidate was elected this round of counting, we eliminate candidate with least votes and transfer their votes back to the district contract for next preference counting.*/
             address currentCandidateWithLeastVotes = candidateAddresses[0];
-            uint32 currentLeastVotes = uint32(voteToken.balanceOf(currentCandidateWithLeastVotes));
+            uint currentLeastVotes = voteToken.balanceOf(currentCandidateWithLeastVotes);
             /*In STV, the candidate to be eliminated is selected randomly if 2 or more candidates are
             tied for least amount of votes; This would be expensive to implement on chain, so to eliminate bias, the addresses passed as candidateAddresses to the District constructor should
             be "shuffled" off-chain before being passed. */
             for (uint8 k = 1; k < candidatesCount; k++){
-                uint32 _balance = uint32(voteToken.balanceOf(candidateAddresses[k]));
+                uint _balance = voteToken.balanceOf(candidateAddresses[k]);
                 address _candidateAddress = candidateAddresses[k];
 
-                if(_balance < currentLeastVotes && candidates[_candidateAddress].eliminated == false && candidates[_candidateAddress].elected ==false ){
+                if(_balance < currentLeastVotes && candidates[_candidateAddress].eliminated == false && candidates[_candidateAddress].elected == false ){
                     currentCandidateWithLeastVotes = _candidateAddress;
                     currentLeastVotes = _balance;
                 }
             }
 
             candidates[currentCandidateWithLeastVotes].eliminated = true;
-            if(currentLeastVotes>0)
+            if(currentLeastVotes>0){
                 voteToken.transferAllBack(currentCandidateWithLeastVotes);
+                uncountedVotes = voteToken.balanceOf(address(this));
+            }
            
             
             

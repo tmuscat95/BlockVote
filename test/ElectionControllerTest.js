@@ -119,5 +119,9 @@ contract("ElectionController",async (accounts) => {
         let voteToken = await VoteToken.at(election.voteToken);
         await truffleAssert.reverts(voteToken.mint(address,1,13),"Ownable: caller is not the owner");
     });
+
+    it('endElection should fail. Because end of election has not passed.', async () => {
+        await truffleAssert.reverts(electionController.endElection(0),reason="Voting Not Over Yet",message="Voting time check failed.");
+    });
     
 });

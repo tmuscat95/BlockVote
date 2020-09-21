@@ -1,7 +1,8 @@
 pragma solidity ^0.6.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "./District.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract VoteToken is ERC721, Ownable{
     mapping(uint256 => uint8) public district; //maps token ID to District voter it is issued to is on.
@@ -10,6 +11,7 @@ contract VoteToken is ERC721, Ownable{
     uint public voteEnd;
     uint64 public votesTotal;
 
+    using SafeMath for uint64;
     //Much of the ERC721 functionality will be restricted to only the District contracts.
     mapping(address => bool) public allowedContracts; 
     modifier OnlyAllowed {
@@ -54,7 +56,7 @@ contract VoteToken is ERC721, Ownable{
 
         _mint(_to , _tokenId);
         district[_tokenId] = _districtNo;
-        votesTotal += 1;
+        votesTotal++;
     }
     
     /*

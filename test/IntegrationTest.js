@@ -228,7 +228,7 @@ const schema = {
 contract("ElectionController", async (accounts) => {
     const officialVotes = 305556;
     const districtsNo = 13;
-    const parties = ['PL','PN','AD'];
+    const parties = ['PL','PN','AD','Ind','PA','AL'];
 
     var electionController;
     var districtFactory;

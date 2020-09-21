@@ -32,15 +32,17 @@ contract("ElectionController",async (accounts) => {
         candidateAddresses = [];
         _name = "TEST";
         _voteStart = 0;
-        _voteEnd = Date.now() + 999999999;
+        _voteEnd = Date.now() + 10000;
         
         
         //console.log(voteToken);
     });
 
     it("Election Should End with correct results",async ()=>{
-        electionController = await ElectionController.new(districtsNo,districtFactory.address,voteTokenFactory.address);
-
+        
+        setTimeout(async ()=>{
+            electionController = await ElectionController.new(districtsNo,districtFactory.address,voteTokenFactory.address);
+        
         for (let i=0;i<districtsNo;i++){
             candidates.push([]);
             candidateAddresses.push([]);
@@ -114,6 +116,8 @@ contract("ElectionController",async (accounts) => {
         
         console.log(election);
         assert.equal(election.partyWithMostVotesIndex,1);
+        },8000)
+        
         
     });
 

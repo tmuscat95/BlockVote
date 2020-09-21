@@ -20,7 +20,7 @@ library Shared {
         uint8 districtNo;
         
         Candidate[] candidateResults;
-        uint32[] party1stCountVotes;
+        uint64[] party1stCountVotes;
     }
     
     
@@ -34,7 +34,7 @@ library Shared {
         uint8 partyWithMostVotesIndex;
         uint8 numberOfPartiesContesting;
         
-        mapping(uint8 => uint32) party1stCountVotes;
+        mapping(uint8 => uint64) party1stCountVotes;
         //mapping(uint8 => DistrictResults) districtResults;
         
     }

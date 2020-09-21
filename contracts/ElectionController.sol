@@ -22,10 +22,11 @@ contract ElectionController is Ownable{
         voteTokenFactory = _voteTokenFactory;
     }
 
-    function endElection(uint8 _electionNo) external{
+    function endElection(uint8 _electionNo) onlyOwner external{
         //Shared.Election storage election = elections[_electionNo]; //storage in order to copy by reference.
+        require(now > elections[_electionNo].voteEnd,"Voting Not Over Yet");
         uint8 partyWithMostVotesIndex;
-        uint32 mostVotes;
+        uint64 mostVotes;
         
         for(uint8 i = 1; i <= districtsNo; i++){
             //require(election.districtContracts[i].counted() == true, string(abi.encodePacked("Hasn't Counted Yet: ",i)));
@@ -52,18 +53,19 @@ contract ElectionController is Ownable{
         elections[_electionNo].concluded = true;
     }
     
+    event ElectionLaunched(uint electionNo, uint time, uint voteStart, uint voteEnd, uint8 numberOfPartiesContesting, string name);
     function launchElection (
-        string memory _name,
-        uint _voteStart,
-        uint _voteEnd,
-        uint8 numberOfPartiesContesting,
-        Shared.Candidate[][] memory candidates
-        ) public onlyOwner{
+            string memory _name,
+            uint _voteStart,
+            uint _voteEnd,
+            uint8 numberOfPartiesContesting,
+            Shared.Candidate[][] memory candidates
+            ) public onlyOwner{
 
         VoteToken _voteToken = voteTokenFactory.create(_name,_voteStart,_voteEnd);
         elections.push(Shared.Election({name: _name, voteStart: _voteStart, voteEnd: _voteEnd, voteToken: _voteToken, concluded:false, partyWithMostVotesIndex:255, numberOfPartiesContesting: uint8(candidates.length)}));
         
-        
+        require(elections.length > 0,"Election Launch Failed.");
         for(uint8 i = 1 ; i <= districtsNo; i++){
             District d = districtFactory.create(i, candidates[i-1]);
             elections[elections.length-1].voteToken.setApprovalForAll(address(d),true);
@@ -72,7 +74,8 @@ contract ElectionController is Ownable{
             elections[elections.length-1].districtContracts[i].setVoteToken(elections[elections.length-1].voteToken);
         
         }
- 
+
+        emit ElectionLaunched(elections.length-1, now, _voteStart, _voteEnd, numberOfPartiesContesting, _name);
     }
 
     function vote(uint8 _electionNo, uint256 _voteTokenID, address[] memory _preferences) public onlyOwner {
@@ -81,7 +84,6 @@ contract ElectionController is Ownable{
         District _district = elections[_electionNo].districtContracts[districtNo];
         //voteToken.setApprovalForAll(_district,true);
         _district.vote(_voteTokenID,_preferences);
-
     }
     
     function balanceOf(address _address, uint16 _election) public view returns(uint256){
