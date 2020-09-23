@@ -1,9 +1,9 @@
 {
   "contractName": "Shared",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":\"Shared\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol\":{\"keccak256\":\"0x4779c1b54dd84f97762b11e980db12d4f6d278ef169be584c83a2398ba8465e3\",\"urls\":[\"bzz-raw://d3162487a8d88a790aa463ace4d93661d9fdcb9545b99543a2e0269a91deb775\",\"dweb:/ipfs/QmWsZzTBHaeK3gHd1tHJUUNiCeZ26pjvfyRg5fQRYQFjK9\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":{\"keccak256\":\"0xa45c879fcbc11332c4c2d2077566df254a005044a334ef554025974e49efdd3c\",\"urls\":[\"bzz-raw://0d255e9b8b93777f3043dbb6559ca098c1a9dbfc2df2d8fc6ca18c0a932cfba6\",\"dweb:/ipfs/QmUWScakhGnEGCCwDDWHPggosnaaykSijQ8nRtWjHWS7Cd\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol\":{\"keccak256\":\"0x022546580fe50777a9dadfa9235160cb3ea58e9b17beac183835fb821b8b5d9d\",\"urls\":[\"bzz-raw://02ae4b0e1e6f4470cef548d17b119977804cadd4f582025fe7b9f3cae44ed531\",\"dweb:/ipfs/QmcjEtAbmN51zxUzJAN7izDVWdNPDadhe5RiYrGystYehq\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0xb046d18f9d09683ca1c0ed6d80c61da8a8a7d9b30bad70a17b898538683eff74\",\"urls\":[\"bzz-raw://4728713afa6ae36cc9e92c7107c796a313add3ec20f813be2cde76c814486b2a\",\"dweb:/ipfs/QmUJBTXvYaGDF5PVnd5pUvYerc9DRXvqANDzgCzAp3FkkA\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xfa152b6e88a1dc50780e8f1580426dc23ad2e1e2c2f086a088adf206a202f453\",\"urls\":[\"bzz-raw://5127b264994adab88fae419b1c493efc5acd07134c19ee5c0397e50018291ebf\",\"dweb:/ipfs/QmWwJZVhvdmvUCdimbb6R2Jiu59zjPqm6XTMchM6LaEHAp\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0xfc398838759c3248bdca40f7bc060e789c8d715df22f9eee7494bcafe14fa1b8\",\"urls\":[\"bzz-raw://ca2e28a5681be0558b2de6a24c107299925f8bd9e3244e9a70b033d6eab782c8\",\"dweb:/ipfs/QmX5kRT4Gwq4GQYfEdxVsE7PALpGfQEuQJhsfpCap9inKm\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xaf936da92f3a9a4f98b237323b5eb1d813fb86c4d07a184beba7027cf0509ba3\",\"urls\":[\"bzz-raw://aaa210e132e06975eb9f20060db6ba7dee78f6fce691a1c2489525584de521c0\",\"dweb:/ipfs/QmRwzi4nUW3UWBwhY5ik2xW3JZo9NMLN5UyGi1xPpMQYrh\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x3636662804cd8f474536b2875a9038a4c3fb91879f1bbff48af5c3f140fcd2f0\",\"urls\":[\"bzz-raw://9fab8521263fa581544000cb57335a3f2e6bcdfbb5579d3ceaa5acf741c67c4f\",\"dweb:/ipfs/QmZfXnMom7JSNtfyie5yGPN1SUC4SmHbz4ScVBH88URmA7\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xe7f984cedc00a138dc27f263c73c32ba9a4b2fd23b6c34ac46f46c074b943538\",\"urls\":[\"bzz-raw://0f4acda12f076fe7584921241ddbb5b460ca7cad6cb8a42252ac7f2a9f539127\",\"dweb:/ipfs/QmQmfhkEv9GrhdWe67QtXnU19AMuoEmy31QnHPkucdYLjZ\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x321ee37ef4925020aa818a03ec7fe48e057561f65ab009a84f6c20c86026ade7\",\"urls\":[\"bzz-raw://01f9d74a17a56024984251b97e428e24c9d3abffbae5bd290f0ec263c82e9694\",\"dweb:/ipfs/QmRryCuuXu2ukrDmatB8TqdEhPLiK6NBRt41RiPUaX1qKy\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0x244e4b74b17716120cf28e58636f11c699b8c0c94628bd952a95cee038d7e32b\",\"urls\":[\"bzz-raw://198d566157120c526bd6b5086b32cae85a11389b8a538f533ba9f9447915da0e\",\"dweb:/ipfs/QmeE6d8KWERx7f1FVS5tMnitNJxBm2yWXRSEUBF7R6voLh\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0xb2a11b236f073662f5a196995863f51c11d006bf7c3de158b316dfa1506c4b79\",\"urls\":[\"bzz-raw://8651649cf0b9efa18c3b01c030276fa320d41adbdc286833417e7f36e357b2f3\",\"dweb:/ipfs/QmafhM2Nd1aP43QVB1eRRZaqRXQKswNfQcWi8U8xjrxCfN\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x79484115dbfa737054f73e041009a02eeb434dd81be5d684bf4255ad3b5ab558\",\"urls\":[\"bzz-raw://12c119699463450c2544f5b9d8709b5e9e9164c62948a79c3ec53423a051d969\",\"dweb:/ipfs/QmPJduzSAaekq447QeFqAp3E7dc8CnNk5ajofckJ4ahA7Q\"]}},\"version\":1}",
-  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220036b208040871aa5e533b5f4c3a00b9360468e1f07267222b90cd9937069341664736f6c63430006020033",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220036b208040871aa5e533b5f4c3a00b9360468e1f07267222b90cd9937069341664736f6c63430006020033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":\"Shared\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol\":{\"keccak256\":\"0xe3c89163c1571df41ec38598539017f2dc46a8f8ab74d45416fe102a71423978\",\"urls\":[\"bzz-raw://131731e220cb3603f6a1e3b709fad409fdfad1be259276c16ffcda584ebd8eea\",\"dweb:/ipfs/QmYDdq5xeV25tcPLffrHmLyhrusDMD1keVGydatKGWtmGp\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol\":{\"keccak256\":\"0xa45c879fcbc11332c4c2d2077566df254a005044a334ef554025974e49efdd3c\",\"urls\":[\"bzz-raw://0d255e9b8b93777f3043dbb6559ca098c1a9dbfc2df2d8fc6ca18c0a932cfba6\",\"dweb:/ipfs/QmUWScakhGnEGCCwDDWHPggosnaaykSijQ8nRtWjHWS7Cd\"]},\"/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol\":{\"keccak256\":\"0x731ece56c692497d2ee33e1efda383b80a3671be2a22038863d80f1d6e952122\",\"urls\":[\"bzz-raw://d525059c5f49ac6d2fa053bb85799297064ffcf7c7aff8e96ff4e744553f8a9f\",\"dweb:/ipfs/QmS5sh9VMePGLK2LuBtXwLJSCSsftPURPt4SCmMuwPDhpi\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]},\"@openzeppelin/contracts/introspection/ERC165.sol\":{\"keccak256\":\"0xb046d18f9d09683ca1c0ed6d80c61da8a8a7d9b30bad70a17b898538683eff74\",\"urls\":[\"bzz-raw://4728713afa6ae36cc9e92c7107c796a313add3ec20f813be2cde76c814486b2a\",\"dweb:/ipfs/QmUJBTXvYaGDF5PVnd5pUvYerc9DRXvqANDzgCzAp3FkkA\"]},\"@openzeppelin/contracts/introspection/IERC165.sol\":{\"keccak256\":\"0xfa152b6e88a1dc50780e8f1580426dc23ad2e1e2c2f086a088adf206a202f453\",\"urls\":[\"bzz-raw://5127b264994adab88fae419b1c493efc5acd07134c19ee5c0397e50018291ebf\",\"dweb:/ipfs/QmWwJZVhvdmvUCdimbb6R2Jiu59zjPqm6XTMchM6LaEHAp\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\",\"urls\":[\"bzz-raw://2df142592d1dc267d9549049ee3317fa190d2f87eaa565f86ab05ec83f7ab8f5\",\"dweb:/ipfs/QmSkJtcfWo7c42KnL5hho6GFxK6HRNV91XABx1P7xDtfLV\"]},\"@openzeppelin/contracts/token/ERC721/ERC721.sol\":{\"keccak256\":\"0xfc398838759c3248bdca40f7bc060e789c8d715df22f9eee7494bcafe14fa1b8\",\"urls\":[\"bzz-raw://ca2e28a5681be0558b2de6a24c107299925f8bd9e3244e9a70b033d6eab782c8\",\"dweb:/ipfs/QmX5kRT4Gwq4GQYfEdxVsE7PALpGfQEuQJhsfpCap9inKm\"]},\"@openzeppelin/contracts/token/ERC721/IERC721.sol\":{\"keccak256\":\"0xaf936da92f3a9a4f98b237323b5eb1d813fb86c4d07a184beba7027cf0509ba3\",\"urls\":[\"bzz-raw://aaa210e132e06975eb9f20060db6ba7dee78f6fce691a1c2489525584de521c0\",\"dweb:/ipfs/QmRwzi4nUW3UWBwhY5ik2xW3JZo9NMLN5UyGi1xPpMQYrh\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol\":{\"keccak256\":\"0x3636662804cd8f474536b2875a9038a4c3fb91879f1bbff48af5c3f140fcd2f0\",\"urls\":[\"bzz-raw://9fab8521263fa581544000cb57335a3f2e6bcdfbb5579d3ceaa5acf741c67c4f\",\"dweb:/ipfs/QmZfXnMom7JSNtfyie5yGPN1SUC4SmHbz4ScVBH88URmA7\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol\":{\"keccak256\":\"0xe7f984cedc00a138dc27f263c73c32ba9a4b2fd23b6c34ac46f46c074b943538\",\"urls\":[\"bzz-raw://0f4acda12f076fe7584921241ddbb5b460ca7cad6cb8a42252ac7f2a9f539127\",\"dweb:/ipfs/QmQmfhkEv9GrhdWe67QtXnU19AMuoEmy31QnHPkucdYLjZ\"]},\"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol\":{\"keccak256\":\"0x321ee37ef4925020aa818a03ec7fe48e057561f65ab009a84f6c20c86026ade7\",\"urls\":[\"bzz-raw://01f9d74a17a56024984251b97e428e24c9d3abffbae5bd290f0ec263c82e9694\",\"dweb:/ipfs/QmRryCuuXu2ukrDmatB8TqdEhPLiK6NBRt41RiPUaX1qKy\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0xf5fa8cbdffa5ef8be49b246b5628facc30b71707e78a45d80d93b64eff3fe390\",\"urls\":[\"bzz-raw://774e78a9ff32792cc95db4d2ceaf3a7965bb7f0bea5e6cb7cff182b450d44b37\",\"dweb:/ipfs/QmRRMC4uj7eAcLW7chynA3sNEYULMFazdLwQHKHQPyzAbA\"]},\"@openzeppelin/contracts/utils/EnumerableMap.sol\":{\"keccak256\":\"0x244e4b74b17716120cf28e58636f11c699b8c0c94628bd952a95cee038d7e32b\",\"urls\":[\"bzz-raw://198d566157120c526bd6b5086b32cae85a11389b8a538f533ba9f9447915da0e\",\"dweb:/ipfs/QmeE6d8KWERx7f1FVS5tMnitNJxBm2yWXRSEUBF7R6voLh\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0xb2a11b236f073662f5a196995863f51c11d006bf7c3de158b316dfa1506c4b79\",\"urls\":[\"bzz-raw://8651649cf0b9efa18c3b01c030276fa320d41adbdc286833417e7f36e357b2f3\",\"dweb:/ipfs/QmafhM2Nd1aP43QVB1eRRZaqRXQKswNfQcWi8U8xjrxCfN\"]},\"@openzeppelin/contracts/utils/Strings.sol\":{\"keccak256\":\"0x79484115dbfa737054f73e041009a02eeb434dd81be5d684bf4255ad3b5ab558\",\"urls\":[\"bzz-raw://12c119699463450c2544f5b9d8709b5e9e9164c62948a79c3ec53423a051d969\",\"dweb:/ipfs/QmPJduzSAaekq447QeFqAp3E7dc8CnNk5ajofckJ4ahA7Q\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220b1fc072318e09d014f2da441abd28acaf8b588d01aa5e4b804475ebbed8ee53164736f6c63430006020033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220b1fc072318e09d014f2da441abd28acaf8b588d01aa5e4b804475ebbed8ee53164736f6c63430006020033",
   "sourceMap": "77:820:4:-:0;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "77:820:4:-:0;;;;;;;;",
   "source": "pragma solidity ^0.6.0;\nimport \"./VoteToken.sol\";\nimport \"./District.sol\";\n\n\nlibrary Shared {\n    uint8 constant parties = 2;\n    struct Candidate{\n        address _address;\n        uint8 party;\n        uint8 districtNo;\n        \n        bool elected;\n        bool eliminated;\n        \n        uint32 votes;\n    }\n    \n    struct DistrictResults {\n        uint8 districtNo;\n        \n        Candidate[] candidateResults;\n        uint64[] party1stCountVotes;\n    }\n    \n    \n    struct Election{\n        mapping(uint8 => District) districtContracts;\n        string name;\n        uint voteStart;\n        uint voteEnd;\n        VoteToken voteToken;\n        bool concluded;\n        uint8 partyWithMostVotesIndex;\n        uint8 numberOfPartiesContesting;\n        \n        mapping(uint8 => uint64) party1stCountVotes;\n        //mapping(uint8 => DistrictResults) districtResults;\n        \n    }\n   \n    \n}",
@@ -12,14 +12,14 @@
     "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol",
     "exportedSymbols": {
       "Shared": [
-        1362
+        1359
       ]
     },
-    "id": 1363,
+    "id": 1360,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1311,
+        "id": 1308,
         "literals": [
           "solidity",
           "^",
@@ -32,10 +32,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol",
         "file": "./VoteToken.sol",
-        "id": 1312,
+        "id": 1309,
         "nodeType": "ImportDirective",
-        "scope": 1363,
-        "sourceUnit": 1690,
+        "scope": 1360,
+        "sourceUnit": 1687,
         "src": "24:25:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -43,10 +43,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol",
         "file": "./District.sol",
-        "id": 1313,
+        "id": 1310,
         "nodeType": "ImportDirective",
-        "scope": 1363,
-        "sourceUnit": 744,
+        "scope": 1360,
+        "sourceUnit": 739,
         "src": "50:24:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -58,20 +58,20 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1362,
+        "id": 1359,
         "linearizedBaseContracts": [
-          1362
+          1359
         ],
         "name": "Shared",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 1316,
+            "id": 1313,
             "name": "parties",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 1362,
+            "scope": 1359,
             "src": "98:26:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -80,7 +80,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 1314,
+              "id": 1311,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "98:5:4",
@@ -92,7 +92,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "32",
-              "id": 1315,
+              "id": 1312,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -111,15 +111,15 @@
           },
           {
             "canonicalName": "Shared.Candidate",
-            "id": 1329,
+            "id": 1326,
             "members": [
               {
                 "constant": false,
-                "id": 1318,
+                "id": 1315,
                 "name": "_address",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "156:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -128,7 +128,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1317,
+                  "id": 1314,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "156:7:4",
@@ -143,11 +143,11 @@
               },
               {
                 "constant": false,
-                "id": 1320,
+                "id": 1317,
                 "name": "party",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "182:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -156,7 +156,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1319,
+                  "id": 1316,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "182:5:4",
@@ -170,11 +170,11 @@
               },
               {
                 "constant": false,
-                "id": 1322,
+                "id": 1319,
                 "name": "districtNo",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "203:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -183,7 +183,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1321,
+                  "id": 1318,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "203:5:4",
@@ -197,11 +197,11 @@
               },
               {
                 "constant": false,
-                "id": 1324,
+                "id": 1321,
                 "name": "elected",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "238:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -210,7 +210,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1323,
+                  "id": 1320,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "238:4:4",
@@ -224,11 +224,11 @@
               },
               {
                 "constant": false,
-                "id": 1326,
+                "id": 1323,
                 "name": "eliminated",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "260:15:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -237,7 +237,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1325,
+                  "id": 1322,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "260:4:4",
@@ -251,11 +251,11 @@
               },
               {
                 "constant": false,
-                "id": 1328,
+                "id": 1325,
                 "name": "votes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "294:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -264,7 +264,7 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 1327,
+                  "id": 1324,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
                   "src": "294:6:4",
@@ -279,21 +279,21 @@
             ],
             "name": "Candidate",
             "nodeType": "StructDefinition",
-            "scope": 1362,
+            "scope": 1359,
             "src": "130:183:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Shared.DistrictResults",
-            "id": 1338,
+            "id": 1335,
             "members": [
               {
                 "constant": false,
-                "id": 1331,
+                "id": 1328,
                 "name": "districtNo",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1338,
+                "scope": 1335,
                 "src": "356:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -302,7 +302,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1330,
+                  "id": 1327,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "356:5:4",
@@ -316,37 +316,37 @@
               },
               {
                 "constant": false,
-                "id": 1334,
+                "id": 1331,
                 "name": "candidateResults",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1338,
+                "scope": 1335,
                 "src": "391:28:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_Candidate_$1329_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_Candidate_$1326_storage_$dyn_storage_ptr",
                   "typeString": "struct Shared.Candidate[]"
                 },
                 "typeName": {
                   "baseType": {
                     "contractScope": null,
-                    "id": 1332,
+                    "id": 1329,
                     "name": "Candidate",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1329,
+                    "referencedDeclaration": 1326,
                     "src": "391:9:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Candidate_$1329_storage_ptr",
+                      "typeIdentifier": "t_struct$_Candidate_$1326_storage_ptr",
                       "typeString": "struct Shared.Candidate"
                     }
                   },
-                  "id": 1333,
+                  "id": 1330,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "391:11:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Candidate_$1329_storage_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Candidate_$1326_storage_$dyn_storage_ptr",
                     "typeString": "struct Shared.Candidate[]"
                   }
                 },
@@ -355,11 +355,11 @@
               },
               {
                 "constant": false,
-                "id": 1337,
+                "id": 1334,
                 "name": "party1stCountVotes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1338,
+                "scope": 1335,
                 "src": "429:27:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -369,7 +369,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1335,
+                    "id": 1332,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "429:6:4",
@@ -378,7 +378,7 @@
                       "typeString": "uint64"
                     }
                   },
-                  "id": 1336,
+                  "id": 1333,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "429:8:4",
@@ -393,32 +393,32 @@
             ],
             "name": "DistrictResults",
             "nodeType": "StructDefinition",
-            "scope": 1362,
+            "scope": 1359,
             "src": "323:140:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Shared.Election",
-            "id": 1361,
+            "id": 1358,
             "members": [
               {
                 "constant": false,
-                "id": 1342,
+                "id": 1339,
                 "name": "districtContracts",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "503:44:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$743_$",
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$738_$",
                   "typeString": "mapping(uint8 => contract District)"
                 },
                 "typeName": {
-                  "id": 1341,
+                  "id": 1338,
                   "keyType": {
-                    "id": 1339,
+                    "id": 1336,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "511:5:4",
@@ -430,18 +430,18 @@
                   "nodeType": "Mapping",
                   "src": "503:26:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$743_$",
+                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$738_$",
                     "typeString": "mapping(uint8 => contract District)"
                   },
                   "valueType": {
                     "contractScope": null,
-                    "id": 1340,
+                    "id": 1337,
                     "name": "District",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 743,
+                    "referencedDeclaration": 738,
                     "src": "520:8:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_District_$743",
+                      "typeIdentifier": "t_contract$_District_$738",
                       "typeString": "contract District"
                     }
                   }
@@ -451,11 +451,11 @@
               },
               {
                 "constant": false,
-                "id": 1344,
+                "id": 1341,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "557:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -464,7 +464,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1343,
+                  "id": 1340,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "557:6:4",
@@ -478,11 +478,11 @@
               },
               {
                 "constant": false,
-                "id": 1346,
+                "id": 1343,
                 "name": "voteStart",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "578:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -491,7 +491,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1345,
+                  "id": 1342,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "578:4:4",
@@ -505,11 +505,11 @@
               },
               {
                 "constant": false,
-                "id": 1348,
+                "id": 1345,
                 "name": "voteEnd",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "602:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -518,7 +518,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1347,
+                  "id": 1344,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "602:4:4",
@@ -532,27 +532,27 @@
               },
               {
                 "constant": false,
-                "id": 1350,
+                "id": 1347,
                 "name": "voteToken",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "624:19:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_VoteToken_$1689",
+                  "typeIdentifier": "t_contract$_VoteToken_$1686",
                   "typeString": "contract VoteToken"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 1349,
+                  "id": 1346,
                   "name": "VoteToken",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 1689,
+                  "referencedDeclaration": 1686,
                   "src": "624:9:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_VoteToken_$1689",
+                    "typeIdentifier": "t_contract$_VoteToken_$1686",
                     "typeString": "contract VoteToken"
                   }
                 },
@@ -561,11 +561,11 @@
               },
               {
                 "constant": false,
-                "id": 1352,
+                "id": 1349,
                 "name": "concluded",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "653:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -574,7 +574,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1351,
+                  "id": 1348,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "653:4:4",
@@ -588,11 +588,11 @@
               },
               {
                 "constant": false,
-                "id": 1354,
+                "id": 1351,
                 "name": "partyWithMostVotesIndex",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "677:29:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -601,7 +601,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1353,
+                  "id": 1350,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "677:5:4",
@@ -615,11 +615,11 @@
               },
               {
                 "constant": false,
-                "id": 1356,
+                "id": 1353,
                 "name": "numberOfPartiesContesting",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "716:31:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -628,7 +628,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1355,
+                  "id": 1352,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "716:5:4",
@@ -642,11 +642,11 @@
               },
               {
                 "constant": false,
-                "id": 1360,
+                "id": 1357,
                 "name": "party1stCountVotes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "766:43:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -655,9 +655,9 @@
                   "typeString": "mapping(uint8 => uint64)"
                 },
                 "typeName": {
-                  "id": 1359,
+                  "id": 1356,
                   "keyType": {
-                    "id": 1357,
+                    "id": 1354,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "774:5:4",
@@ -673,7 +673,7 @@
                     "typeString": "mapping(uint8 => uint64)"
                   },
                   "valueType": {
-                    "id": 1358,
+                    "id": 1355,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "783:6:4",
@@ -689,12 +689,12 @@
             ],
             "name": "Election",
             "nodeType": "StructDefinition",
-            "scope": 1362,
+            "scope": 1359,
             "src": "478:408:4",
             "visibility": "public"
           }
         ],
-        "scope": 1363,
+        "scope": 1360,
         "src": "77:820:4"
       }
     ],
@@ -704,14 +704,14 @@
     "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/Shared.sol",
     "exportedSymbols": {
       "Shared": [
-        1362
+        1359
       ]
     },
-    "id": 1363,
+    "id": 1360,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1311,
+        "id": 1308,
         "literals": [
           "solidity",
           "^",
@@ -724,10 +724,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/VoteToken.sol",
         "file": "./VoteToken.sol",
-        "id": 1312,
+        "id": 1309,
         "nodeType": "ImportDirective",
-        "scope": 1363,
-        "sourceUnit": 1690,
+        "scope": 1360,
+        "sourceUnit": 1687,
         "src": "24:25:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -735,10 +735,10 @@
       {
         "absolutePath": "/Users/timothymuscat/Documents/MScThesis/BlockVote_ReactBox/contracts/District.sol",
         "file": "./District.sol",
-        "id": 1313,
+        "id": 1310,
         "nodeType": "ImportDirective",
-        "scope": 1363,
-        "sourceUnit": 744,
+        "scope": 1360,
+        "sourceUnit": 739,
         "src": "50:24:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -750,20 +750,20 @@
         "contractKind": "library",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1362,
+        "id": 1359,
         "linearizedBaseContracts": [
-          1362
+          1359
         ],
         "name": "Shared",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 1316,
+            "id": 1313,
             "name": "parties",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 1362,
+            "scope": 1359,
             "src": "98:26:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -772,7 +772,7 @@
               "typeString": "uint8"
             },
             "typeName": {
-              "id": 1314,
+              "id": 1311,
               "name": "uint8",
               "nodeType": "ElementaryTypeName",
               "src": "98:5:4",
@@ -784,7 +784,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "32",
-              "id": 1315,
+              "id": 1312,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -803,15 +803,15 @@
           },
           {
             "canonicalName": "Shared.Candidate",
-            "id": 1329,
+            "id": 1326,
             "members": [
               {
                 "constant": false,
-                "id": 1318,
+                "id": 1315,
                 "name": "_address",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "156:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -820,7 +820,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 1317,
+                  "id": 1314,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "156:7:4",
@@ -835,11 +835,11 @@
               },
               {
                 "constant": false,
-                "id": 1320,
+                "id": 1317,
                 "name": "party",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "182:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -848,7 +848,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1319,
+                  "id": 1316,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "182:5:4",
@@ -862,11 +862,11 @@
               },
               {
                 "constant": false,
-                "id": 1322,
+                "id": 1319,
                 "name": "districtNo",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "203:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -875,7 +875,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1321,
+                  "id": 1318,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "203:5:4",
@@ -889,11 +889,11 @@
               },
               {
                 "constant": false,
-                "id": 1324,
+                "id": 1321,
                 "name": "elected",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "238:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -902,7 +902,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1323,
+                  "id": 1320,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "238:4:4",
@@ -916,11 +916,11 @@
               },
               {
                 "constant": false,
-                "id": 1326,
+                "id": 1323,
                 "name": "eliminated",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "260:15:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -929,7 +929,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1325,
+                  "id": 1322,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "260:4:4",
@@ -943,11 +943,11 @@
               },
               {
                 "constant": false,
-                "id": 1328,
+                "id": 1325,
                 "name": "votes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1329,
+                "scope": 1326,
                 "src": "294:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -956,7 +956,7 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 1327,
+                  "id": 1324,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
                   "src": "294:6:4",
@@ -971,21 +971,21 @@
             ],
             "name": "Candidate",
             "nodeType": "StructDefinition",
-            "scope": 1362,
+            "scope": 1359,
             "src": "130:183:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Shared.DistrictResults",
-            "id": 1338,
+            "id": 1335,
             "members": [
               {
                 "constant": false,
-                "id": 1331,
+                "id": 1328,
                 "name": "districtNo",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1338,
+                "scope": 1335,
                 "src": "356:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -994,7 +994,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1330,
+                  "id": 1327,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "356:5:4",
@@ -1008,37 +1008,37 @@
               },
               {
                 "constant": false,
-                "id": 1334,
+                "id": 1331,
                 "name": "candidateResults",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1338,
+                "scope": 1335,
                 "src": "391:28:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_Candidate_$1329_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_Candidate_$1326_storage_$dyn_storage_ptr",
                   "typeString": "struct Shared.Candidate[]"
                 },
                 "typeName": {
                   "baseType": {
                     "contractScope": null,
-                    "id": 1332,
+                    "id": 1329,
                     "name": "Candidate",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1329,
+                    "referencedDeclaration": 1326,
                     "src": "391:9:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Candidate_$1329_storage_ptr",
+                      "typeIdentifier": "t_struct$_Candidate_$1326_storage_ptr",
                       "typeString": "struct Shared.Candidate"
                     }
                   },
-                  "id": 1333,
+                  "id": 1330,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "391:11:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Candidate_$1329_storage_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Candidate_$1326_storage_$dyn_storage_ptr",
                     "typeString": "struct Shared.Candidate[]"
                   }
                 },
@@ -1047,11 +1047,11 @@
               },
               {
                 "constant": false,
-                "id": 1337,
+                "id": 1334,
                 "name": "party1stCountVotes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1338,
+                "scope": 1335,
                 "src": "429:27:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1061,7 +1061,7 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 1335,
+                    "id": 1332,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "429:6:4",
@@ -1070,7 +1070,7 @@
                       "typeString": "uint64"
                     }
                   },
-                  "id": 1336,
+                  "id": 1333,
                   "length": null,
                   "nodeType": "ArrayTypeName",
                   "src": "429:8:4",
@@ -1085,32 +1085,32 @@
             ],
             "name": "DistrictResults",
             "nodeType": "StructDefinition",
-            "scope": 1362,
+            "scope": 1359,
             "src": "323:140:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Shared.Election",
-            "id": 1361,
+            "id": 1358,
             "members": [
               {
                 "constant": false,
-                "id": 1342,
+                "id": 1339,
                 "name": "districtContracts",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "503:44:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$743_$",
+                  "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$738_$",
                   "typeString": "mapping(uint8 => contract District)"
                 },
                 "typeName": {
-                  "id": 1341,
+                  "id": 1338,
                   "keyType": {
-                    "id": 1339,
+                    "id": 1336,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "511:5:4",
@@ -1122,18 +1122,18 @@
                   "nodeType": "Mapping",
                   "src": "503:26:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$743_$",
+                    "typeIdentifier": "t_mapping$_t_uint8_$_t_contract$_District_$738_$",
                     "typeString": "mapping(uint8 => contract District)"
                   },
                   "valueType": {
                     "contractScope": null,
-                    "id": 1340,
+                    "id": 1337,
                     "name": "District",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 743,
+                    "referencedDeclaration": 738,
                     "src": "520:8:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_District_$743",
+                      "typeIdentifier": "t_contract$_District_$738",
                       "typeString": "contract District"
                     }
                   }
@@ -1143,11 +1143,11 @@
               },
               {
                 "constant": false,
-                "id": 1344,
+                "id": 1341,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "557:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1156,7 +1156,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 1343,
+                  "id": 1340,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "557:6:4",
@@ -1170,11 +1170,11 @@
               },
               {
                 "constant": false,
-                "id": 1346,
+                "id": 1343,
                 "name": "voteStart",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "578:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1183,7 +1183,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1345,
+                  "id": 1342,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "578:4:4",
@@ -1197,11 +1197,11 @@
               },
               {
                 "constant": false,
-                "id": 1348,
+                "id": 1345,
                 "name": "voteEnd",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "602:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1210,7 +1210,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 1347,
+                  "id": 1344,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "602:4:4",
@@ -1224,27 +1224,27 @@
               },
               {
                 "constant": false,
-                "id": 1350,
+                "id": 1347,
                 "name": "voteToken",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "624:19:4",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_VoteToken_$1689",
+                  "typeIdentifier": "t_contract$_VoteToken_$1686",
                   "typeString": "contract VoteToken"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 1349,
+                  "id": 1346,
                   "name": "VoteToken",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 1689,
+                  "referencedDeclaration": 1686,
                   "src": "624:9:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_VoteToken_$1689",
+                    "typeIdentifier": "t_contract$_VoteToken_$1686",
                     "typeString": "contract VoteToken"
                   }
                 },
@@ -1253,11 +1253,11 @@
               },
               {
                 "constant": false,
-                "id": 1352,
+                "id": 1349,
                 "name": "concluded",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "653:14:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1266,7 +1266,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 1351,
+                  "id": 1348,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "653:4:4",
@@ -1280,11 +1280,11 @@
               },
               {
                 "constant": false,
-                "id": 1354,
+                "id": 1351,
                 "name": "partyWithMostVotesIndex",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "677:29:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1293,7 +1293,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1353,
+                  "id": 1350,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "677:5:4",
@@ -1307,11 +1307,11 @@
               },
               {
                 "constant": false,
-                "id": 1356,
+                "id": 1353,
                 "name": "numberOfPartiesContesting",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "716:31:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1320,7 +1320,7 @@
                   "typeString": "uint8"
                 },
                 "typeName": {
-                  "id": 1355,
+                  "id": 1352,
                   "name": "uint8",
                   "nodeType": "ElementaryTypeName",
                   "src": "716:5:4",
@@ -1334,11 +1334,11 @@
               },
               {
                 "constant": false,
-                "id": 1360,
+                "id": 1357,
                 "name": "party1stCountVotes",
                 "nodeType": "VariableDeclaration",
                 "overrides": null,
-                "scope": 1361,
+                "scope": 1358,
                 "src": "766:43:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1347,9 +1347,9 @@
                   "typeString": "mapping(uint8 => uint64)"
                 },
                 "typeName": {
-                  "id": 1359,
+                  "id": 1356,
                   "keyType": {
-                    "id": 1357,
+                    "id": 1354,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "774:5:4",
@@ -1365,7 +1365,7 @@
                     "typeString": "mapping(uint8 => uint64)"
                   },
                   "valueType": {
-                    "id": 1358,
+                    "id": 1355,
                     "name": "uint64",
                     "nodeType": "ElementaryTypeName",
                     "src": "783:6:4",
@@ -1381,12 +1381,12 @@
             ],
             "name": "Election",
             "nodeType": "StructDefinition",
-            "scope": 1362,
+            "scope": 1359,
             "src": "478:408:4",
             "visibility": "public"
           }
         ],
-        "scope": 1363,
+        "scope": 1360,
         "src": "77:820:4"
       }
     ],
@@ -1397,15 +1397,21 @@
     "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
   },
   "networks": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0xDB4fcA9c4B3dcb79d13CB6BC1B146243485b84DD",
+      "transactionHash": "0xdba0e4622604cdc7abf62e66442d53b8de0ba3cf1c25fd97d554032e3a815f58"
+    },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xc18298E52FE92D5cF264d6dDf9B581D9974D5FB5",
-      "transactionHash": "0x897f535bba3ae520ebde3cf4fb614bda23625969243711a3c3925bdcca671ca5"
+      "address": "0x91C7d279F2d11f33CFE4fA1dDc760DD513E076B4",
+      "transactionHash": "0x7c958cf88e1b8ae6f57f8065447eddd270aa700e6fe688f95d0e79fd184aa7ad"
     }
   },
   "schemaVersion": "3.2.2",
-  "updatedAt": "2020-09-21T08:53:10.752Z",
+  "updatedAt": "2020-09-22T16:12:16.117Z",
   "devdoc": {
     "methods": {}
   },

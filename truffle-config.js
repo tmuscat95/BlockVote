@@ -12,10 +12,16 @@ module.exports = {
       //gasPrice: 20000000000,
       network_id: "*", // match any network
       websockets: false
+    },
+    electiontest : {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*",
+      from: "0xAa68840d211dbf304Ad667453B478a73aBC93727"
     }
   
   },
-  plugins: ["solidity-coverage"],
+  plugins: ["solidity-coverage","truffle-security"],
   compilers: {
     solc:{
       version: "0.6.2"

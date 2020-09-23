@@ -49,18 +49,18 @@ contract District is Ownable{
         }
     }
     
-    function setVoteToken(VoteToken _voteToken) public onlyOwner{
+    function setVoteToken(VoteToken _voteToken) external onlyOwner{
         voteToken = _voteToken;
     }
     /*function getVoterTurnout() public view returns(uint){
         return castVotes/eligibleVotes;
     }*/
 
-    function getCandidateAddresses() public view returns(address[] memory){
+    function getCandidateAddresses() external view returns(address[] memory){
         return candidateAddresses;
     }
     
-    function vote(uint256 tokenId, address[] memory _preferences) public onlyOwner {
+    function vote(uint256 tokenId, address[] calldata _preferences) external onlyOwner {
         require(voteToken.district(tokenId) == districtNumber,"Incorrect District");
 
         for(uint8 i = 0; i < _preferences.length; i++)
@@ -78,7 +78,7 @@ contract District is Ownable{
 
    }*/
 
-   function getAddresses() public view returns(address[] memory) {
+   function getAddresses() external view returns(address[] memory) {
        return candidateAddresses;
    }
 
@@ -93,7 +93,7 @@ contract District is Ownable{
    }
 
 
-    function getAllElected() public returns(address[] memory){
+    function getAllElected() external returns(address[] memory){
         if(electedCandidates.length==0){
         
             for(uint8 i = 0; i < candidatesCount; i++){
@@ -105,7 +105,7 @@ contract District is Ownable{
         return electedCandidates;
     }
     
-    function kill() public onlyOwner {
+    function kill() external onlyOwner {
         //require(msg.sender == owner);
         selfdestruct(msg.sender);
     }
@@ -114,7 +114,7 @@ contract District is Ownable{
         voteToken.transferAllBack(_from);
     }
 
-    function countVotes() public onlyOwner{
+    function countVotes() external onlyOwner{
         uint8 seatsRemaining = seats; //number of seats which have not yet been filled.
         castVotes = voteToken.balanceOf(address(this));
         quota = getQuota();
@@ -126,14 +126,7 @@ contract District is Ownable{
             bool candidateElected = false; 
             //whether in this round of counting at least one seat has been filled. 
             uint uncountedVotes = voteToken.balanceOf(address(this));
-            //uint256[] memory voteTokenIDs = new uint256[](uncountedVotes);
-
-            /*for (uint32 i = 0; i < uncountedVotes; i++){
-                uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i);
-                voteTokenIDs[i] = voteTokenID;
-            }*/
-
-            /*for (uint i = 0; i < uncountedVotes; i++)*/
+            
             uint8 i=0; 
             /*
             i: "pointer" value which indicates which indicates the index of the token that will be counted, starts at 0 at each round of counting and increases by 1 when a vote is encountered that cannot be
@@ -150,8 +143,6 @@ contract District is Ownable{
             */
             while(uncountedVotes > 0 && i < uncountedVotes){
                 uint256 voteTokenID = voteToken.tokenOfOwnerByIndex(address(this),i); 
-                //uint256 voteTokenID = voteTokenIDs[i];
-
                 /*
                 If a vote is uncounted by the jth round of counting, and the voter only marked j-1 preferences,
                 ie: the voter's preferences from 1 to j-1 have all been elected or eliminated by the time the vote is counted,
@@ -164,10 +155,7 @@ contract District is Ownable{
                 }
                 else
                     noMoreRounds = false;
-                
-               /* else
-                    noMoreRounds = false;*/
-
+ 
                 if(j==1)
                     party1stCountVotes[candidates[candidateAddress].party] += 1;
                     /*
@@ -178,7 +166,7 @@ contract District is Ownable{
                 uint voteBalance = voteToken.balanceOf(candidateAddress);
                 
                 
-                if(voteBalance == quota-1 && candidates[candidateAddress].eliminated == false){
+                if(voteBalance >= quota-1 && !candidates[candidateAddress].eliminated){
                     voteToken.transferFrom(address(this), candidateAddress, voteTokenID);
                     candidates[candidateAddress].elected = true;
                     candidateElected = true;
@@ -188,11 +176,11 @@ contract District is Ownable{
                     if(seatsRemaining == 0)
                         break;
                 }
-                else if(candidates[candidateAddress].elected == false && candidates[candidateAddress].eliminated == false){
+                else if(!candidates[candidateAddress].elected && !candidates[candidateAddress].eliminated){
                     voteToken.transferFrom(address(this), candidateAddress, voteTokenID);
                     uncountedVotes = voteToken.balanceOf(address(this));
                 }
-                else if(candidates[candidateAddress].elected == true || candidates[candidateAddress].eliminated == true){
+                else if(candidates[candidateAddress].elected  || candidates[candidateAddress].eliminated ){
                     // move pointer forward
                     i++;
                     continue;
@@ -214,7 +202,7 @@ contract District is Ownable{
                 uint _balance = voteToken.balanceOf(candidateAddresses[k]);
                 address _candidateAddress = candidateAddresses[k];
 
-                if(_balance < currentLeastVotes && candidates[_candidateAddress].eliminated == false && candidates[_candidateAddress].elected == false ){
+                if(_balance < currentLeastVotes && !candidates[_candidateAddress].eliminated && !candidates[_candidateAddress].elected ){
                     currentCandidateWithLeastVotes = _candidateAddress;
                     currentLeastVotes = _balance;
                 }

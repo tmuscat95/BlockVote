@@ -8,7 +8,7 @@ contract DistrictFactory{
 
     }
 
-    function create(uint8 _districtNumber, Shared.Candidate[] memory _candidates) public returns(District) {
+    function create(uint8 _districtNumber, Shared.Candidate[] calldata _candidates) external returns(District) {
         District d = new District(_districtNumber, _candidates);
         d.transferOwnership(msg.sender);
         return d;

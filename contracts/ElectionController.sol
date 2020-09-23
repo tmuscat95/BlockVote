@@ -16,7 +16,7 @@ contract ElectionController is Ownable{
     DistrictFactory internal districtFactory;
     VoteTokenFactory internal voteTokenFactory;
     
-    constructor(uint8 _districtsNo, DistrictFactory _districtFactory, VoteTokenFactory _voteTokenFactory) Ownable() public payable{
+    constructor(uint8 _districtsNo, DistrictFactory _districtFactory, VoteTokenFactory _voteTokenFactory) Ownable() public {
         districtsNo = _districtsNo;
         districtFactory = _districtFactory;
         voteTokenFactory = _voteTokenFactory;
@@ -25,8 +25,8 @@ contract ElectionController is Ownable{
     function endElection(uint8 _electionNo) onlyOwner external{
         //Shared.Election storage election = elections[_electionNo]; //storage in order to copy by reference.
         require(now > elections[_electionNo].voteEnd,"Voting Not Over Yet");
-        uint8 partyWithMostVotesIndex;
-        uint64 mostVotes;
+        uint8 partyWithMostVotesIndex = 254;
+        uint64 mostVotes = 254;
         
         for(uint8 i = 1; i <= districtsNo; i++){
             //require(election.districtContracts[i].counted() == true, string(abi.encodePacked("Hasn't Counted Yet: ",i)));

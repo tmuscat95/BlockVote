@@ -13,13 +13,13 @@ contract VoteToken is ERC721, Ownable{
 
     using SafeMath for uint64;
     //Much of the ERC721 functionality will be restricted to only the District contracts.
-    mapping(address => bool) public allowedContracts; 
+    mapping(address => bool) internal allowedContracts; 
     modifier OnlyAllowed {
         require(allowedContracts[msg.sender] == true,"Calling Address not in list of allowed contracts.");
         _;
     }
 
-    constructor(string memory __name, string memory __symbol, uint _voteStart, uint _voteEnd) ERC721(__name,__symbol) Ownable() public{
+    constructor(string memory __name, string memory __symbol, uint _voteStart, uint _voteEnd) ERC721(__name,__symbol) Ownable() public {
         voteStart = _voteStart;
         voteEnd = _voteEnd;
         allowedContracts[address(this)] = true;
@@ -27,7 +27,7 @@ contract VoteToken is ERC721, Ownable{
     }
 
     //Called For Each District Contract Address.
-    function setAllowed(address _address) public onlyOwner {
+    function setAllowed(address _address) external onlyOwner {
         allowedContracts[_address] = true;
     }
 
@@ -40,7 +40,7 @@ contract VoteToken is ERC721, Ownable{
     }
     
     /* Maps a given vote Token ID to a mapping of the voter's preferences (1..N) to the addresses of the corresponding candidates. */
-    function setVotePreferences(uint256 _tokenId, address[] memory _preferences) public{
+    function setVotePreferences(uint256 _tokenId, address[] calldata _preferences) external {
         _isApprovedOrOwner(_msgSender(), _tokenId);
 
         for(uint8 i = 1; i <= _preferences.length; i++){
@@ -63,7 +63,7 @@ contract VoteToken is ERC721, Ownable{
     May be called only by District contracts (onlyAllowed). Used in order to redistribute votes from candidates that are eliminated in the process of counting.
     Has the additional restriction that each token must "belong" to the District that is attempting to seize it.
      */
-    function transferAllBack(address _from) public OnlyAllowed {
+    function transferAllBack(address _from) external OnlyAllowed {
         uint8 _districtNo = District(msg.sender).districtNumber();
         uint balance = balanceOf(_from);
 
@@ -91,7 +91,7 @@ contract VoteToken is ERC721, Ownable{
     }
 
     
-    function kill() public onlyOwner {
+    function kill() external onlyOwner {
         selfdestruct(msg.sender);
     }
 }

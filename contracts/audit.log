@@ -1,0 +1,6 @@
+t=2020-09-22T10:09:48+0200 lvl=info msg=Configured api=signer audit log=audit.log
+t=2020-09-22T10:29:34+0200 lvl=info msg=Version    api=signer type=request metadata="{\"remote\":\"NA\",\"local\":\"NA\",\"scheme\":\"NA\",\"User-Agent\":\"\",\"Origin\":\"\"}"
+t=2020-09-22T10:29:34+0200 lvl=info msg=Version    api=signer type=response data=6.0.0 error=nil
+t=2020-09-22T10:31:02+0200 lvl=info msg=Version    api=signer type=request  metadata="{\"remote\":\"NA\",\"local\":\"NA\",\"scheme\":\"NA\",\"User-Agent\":\"\",\"Origin\":\"\"}"
+t=2020-09-22T10:31:02+0200 lvl=info msg=Version    api=signer type=response data=6.0.0 error=nil
+t=2020-09-22T10:33:36+0200 lvl=info msg=List       api=signer type=request  metadata="{\"remote\":\"NA\",\"local\":\"NA\",\"scheme\":\"NA\",\"User-Agent\":\"\",\"Origin\":\"\"}"

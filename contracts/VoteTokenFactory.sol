@@ -9,7 +9,7 @@ contract VoteTokenFactory{
 
     }
 
-    function create(string memory _name, uint _voteStart, uint _voteEnd) public returns(VoteToken){
+    function create(string calldata _name, uint _voteStart, uint _voteEnd) external returns(VoteToken){
         VoteToken t = new VoteToken(_name,"",_voteStart,_voteEnd);
         t.transferOwnership(msg.sender);
         return t;
